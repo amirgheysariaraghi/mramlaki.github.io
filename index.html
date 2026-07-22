@@ -3,24 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مستر املاکی | امیر قیصری - تحلیل بازار مسکن و منتورینگ املاک</title>
-    <!-- Vazirmatn Font from Google Fonts -->
+    
+    <!-- SEO & Meta Tags -->
+    <title>مستر املاکی | تحلیل بازار مسکن، طلا و پیش‌بینی قیمت ملک - امیر قیصری</title>
+    <meta name="description" content="مرجع تخصصی تحلیل بازار مسکن، پیش‌بینی قیمت آپارتمان، بررسی تورم و راهنمای سرمایه‌گذاری در املاک توسط امیر قیصری (مستر املاکی).">
+    <meta name="keywords" content="مستر املاکی, امیر قیصری, تحلیل بازار مسکن, پیش بینی قیمت املاک, سرمایه گذاری ملک, یوتیوب مستر املاکی, آپارات مستر املاکی">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media SEO -->
+    <meta property="og:title" content="مستر املاکی | تحلیل تخصصی بازار مسکن و ملک">
+    <meta property="og:description" content="تحلیل ویدئویی روز بازار املاک، معاوضه، تهاتر و روند قیمت‌ها با امیر قیصری">
+    <meta property="og:image" content="https://img.youtube.com/vi/3Rawh0qMu6A/maxresdefault.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Structured Data (Schema.org for SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "امیر قیصری",
+      "alternateName": "مستر املاکی",
+      "url": "https://mramlaki.ir",
+      "sameAs": [
+        "https://www.youtube.com/@amirgheysari",
+        "https://www.aparat.com/mramlaki",
+        "https://t.me/mramlaki"
+      ],
+      "jobTitle": "منتور و تحلیل‌گر بازار املاک",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "مستر املاکی"
+      }
+    }
+    </script>
+
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --accent-gold: #e5a93b;
-            --accent-gold-hover: #f5b84c;
+            --bg-color: #0b0f19;
+            --card-bg: #151c2c;
+            --accent-gold: #f5b84c;
+            --accent-gold-hover: #e5a93b;
             --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --border-color: #30363d;
+            --text-secondary: #9ca3af;
+            --border-color: #2a3447;
             --youtube-red: #ff0000;
+            --telegram-blue: #229ed9;
+            --aparat-pink: #ed145b;
         }
 
         * {
@@ -34,144 +68,250 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
+        /* Hero Section */
         header {
-            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
             border-bottom: 1px solid var(--border-color);
             padding: 3rem 1.5rem;
             text-align: center;
-            position: relative;
         }
 
-        .profile-badge {
-            width: 120px;
-            height: 120px;
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             border: 3px solid var(--accent-gold);
-            margin: 0 auto 1.5rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--card-bg);
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            box-shadow: 0 0 20px rgba(229, 169, 59, 0.2);
+            background: var(--card-bg) url('https://img.youtube.com/vi/3Rawh0qMu6A/hqdefault.jpg') center/cover;
+            box-shadow: 0 0 25px rgba(245, 184, 76, 0.3);
         }
 
         h1 {
             font-size: 2.2rem;
             font-weight: 900;
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
-        .subtitle {
+        .tagline {
             color: var(--accent-gold);
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .description {
-            max-width: 650px;
-            margin: 0 auto;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            flex: 1;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 800;
             margin-bottom: 1.5rem;
-            border-right: 4px solid var(--accent-gold);
-            padding-right: 0.8rem;
+        }
+
+        /* Social Channel Links Buttons */
+        .social-buttons {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
         }
 
-        .cta-box {
-            background: linear-gradient(90deg, #1f2937 0%, #111827 100%);
-            border: 1px solid var(--accent-gold);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .btn-youtube {
+        .btn-social {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background-color: var(--youtube-red);
+            padding: 0.75rem 1.4rem;
+            border-radius: 50px;
             color: #fff;
-            padding: 0.8rem 1.8rem;
-            border-radius: 30px;
             text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .btn-social:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        }
+
+        .btn-youtube { background-color: var(--youtube-red); }
+        .btn-telegram { background-color: var(--telegram-blue); }
+        .btn-aparat { background-color: var(--aparat-pink); }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.8rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
             font-weight: 800;
-            font-size: 1rem;
-            margin-top: 1.2rem;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
-        .btn-youtube:hover {
-            transform: translateY(-2px);
-            background-color: #cc0000;
+        .section-title i {
+            color: var(--accent-gold);
         }
 
-        .grid {
+        /* Video / Thumbnail Grid */
+        .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .video-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .thumbnail-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .video-card:hover .thumbnail-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 55px;
+            height: 55px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-card:hover .play-icon {
+            background-color: var(--youtube-red);
+        }
+
+        .video-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .video-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .video-meta {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-watch {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-watch:hover {
+            color: var(--accent-gold-hover);
+            text-decoration: underline;
+        }
+
+        /* Feature Cards Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
-        .card {
+        .feature-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
-            transition: border-color 0.2s ease;
+            text-align: center;
         }
 
-        .card:hover {
-            border-color: var(--accent-gold);
-        }
-
-        .card-icon {
-            font-size: 1.8rem;
+        .feature-box i {
+            font-size: 2.2rem;
             color: var(--accent-gold);
             margin-bottom: 1rem;
         }
 
-        .card h3 {
-            font-size: 1.1rem;
+        .feature-box h3 {
+            font-size: 1.15rem;
             margin-bottom: 0.5rem;
         }
 
-        .card p {
+        .feature-box p {
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
         footer {
-            background-color: var(--card-bg);
+            background-color: #070a10;
             border-top: 1px solid var(--border-color);
-            padding: 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         footer a {
@@ -182,60 +322,143 @@
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <div class="profile-badge">
-            <i class="fa-solid fa-city"></i>
+        <div class="profile-container">
+            <div class="profile-avatar"></div>
         </div>
         <h1>مستر املاکی | امیر قیصری</h1>
-        <div class="subtitle">بروکر و منتور تخصصی املاک | تحلیل‌گر بازار مسکن</div>
-        <p class="description">
-            تحلیل جامع و واقع‌بینانه وضعیت بازار املاک، پیش‌بینی قیمت‌ها، نقد تخصصی اخبار مسکن و آموزش و منتورینگ برای فعالان صنعت ساختمان و املاک.
+        <div class="tagline">تحلیل‌گر ارشد بازار مسکن • بروکر و منتور املاک</div>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); font-size: 0.95rem;">
+            تحلیل‌های تخصصی و واقع‌بینانه روند قیمت املاک، طلا و ارز، نقد اخبار مسکن، آموزش‌های حرفه‌ای مشاوران املاک و بررسی سناریوهای بازار مسکن ایران.
         </p>
-    </header>
 
-    <div class="container">
-        
-        <!-- کانال یوتیوب -->
-        <div class="cta-box">
-            <h2>دنبال‌کننده تحلیل‌های زنده بازار مسکن باشید</h2>
-            <p style="color: var(--text-secondary); margin-top: 0.5rem;">
-                جدیدترین لایوها، پیش‌بینی‌های قیمتی و بررسی روند معاملاتی را در کانال یوتیوب مستر املاکی دنبال کنید.
-            </p>
-            <a href="https://www.youtube.com/@amirgheysari" target="_blank" class="btn-youtube">
-                <i class="fa-brands fa-youtube"></i> عضویت در کانال یوتیوب
+        <!-- Social Links (YouTube, Telegram, Aparat) -->
+        <div class="social-buttons">
+            <a href="https://www.youtube.com/@amirgheysari" target="_blank" class="btn-social btn-youtube" rel="noopener">
+                <i class="fa-brands fa-youtube"></i> کانال یوتیوب
+            </a>
+            <a href="https://t.me/mramlaki" target="_blank" class="btn-social btn-telegram" rel="noopener">
+                <i class="fa-brands fa-telegram"></i> کانال تلگرام
+            </a>
+            <a href="https://www.aparat.com/mramlaki" target="_blank" class="btn-social btn-aparat" rel="noopener">
+                <i class="fa-solid fa-video"></i> کانال آپارات
             </a>
         </div>
+    </header>
 
-        <!-- محورهای فعالیت -->
-        <div class="section-title">
-            <i class="fa-solid fa-chart-line"></i>
-            محورهای تخصصی فعالیت
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Latest Videos Section -->
+        <div class="section-header">
+            <div class="section-title">
+                <i class="fa-solid fa-play-circle"></i>
+                آخرین تحلیل‌ها و ویدیوهای مستر املاکی
+            </div>
         </div>
 
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                <h3>تحلیل و پیش‌بینی بازار مسکن</h3>
-                <p>بررسی اثرات تورم، معاوضه و تهاتر، طلای مسکونی و سناریوهای اقتصادی بر قیمت ملک.</p>
+        <div class="video-grid">
+            
+            <!-- Video 1 -->
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=3Rawh0qMu6A" target="_blank" rel="noopener" class="thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/3Rawh0qMu6A/maxresdefault.jpg" alt="پیش بینی بازار مسکن: طلا در کیسه ملک یا املاک روی وزنه زرگران">
+                    <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                </a>
+                <div class="video-info">
+                    <h2 class="video-title">پیش بینی بازار مسکن: جنگ یا توافق؟ طلا در کیسه ملک یا املاک روی وزنه زرگران</h2>
+                    <div class="video-meta">
+                        <span><i class="fa-regular fa-clock"></i> تحلیل تخصصی</span>
+                        <a href="https://www.youtube.com/watch?v=3Rawh0qMu6A" target="_blank" rel="noopener" class="btn-watch">مشاهده در یوتیوب <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
-                <h3>منتورینگ و مشاوره املاک</h3>
-                <p>آموزش اصول حرفه‌ای مربی‌گری و مدیریت املاک برای مشاوران و فعالان صنعت ساخت‌وساز.</p>
+            <!-- Video 2 -->
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=Db8OKj0awws" target="_blank" rel="noopener" class="thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/Db8OKj0awws/maxresdefault.jpg" alt="تحلیل بازار مسکن تهران و معاملات تهاتری">
+                    <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                </a>
+                <div class="video-info">
+                    <h2 class="video-title">تحلیل بازار مسکن: روند رو به بهبود معاملات تهاتری و معاوضه آپارتمان در تهران</h2>
+                    <div class="video-meta">
+                        <span><i class="fa-regular fa-clock"></i> بررسی تهاتر</span>
+                        <a href="https://www.youtube.com/watch?v=Db8OKj0awws" target="_blank" rel="noopener" class="btn-watch">مشاهده در یوتیوب <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-video"></i></div>
-                <h3>لایوهای تخصصی و تحلیل اخبار</h3>
-                <p>برگزاری برنامه‌های زنده و گفتگوهای کارشناسی پیرامون آخرین تحولات بازار املاک کشور.</p>
+            <!-- Video 3 -->
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=HYnnaAAfr4U" target="_blank" rel="noopener" class="thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/HYnnaAAfr4U/maxresdefault.jpg" alt="تحلیل اخبار داغ بازار املاک">
+                    <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                </a>
+                <div class="video-info">
+                    <h2 class="video-title">تحلیل خبرهای داغ بازار املاک و سمت و سوی قیمت‌ها پس از تعطیلات</h2>
+                    <div class="video-meta">
+                        <span><i class="fa-regular fa-clock"></i> لایو هفتگی</span>
+                        <a href="https://www.youtube.com/watch?v=HYnnaAAfr4U" target="_blank" rel="noopener" class="btn-watch">مشاهده در یوتیوب <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=fIoTdZ93adU" target="_blank" rel="noopener" class="thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/fIoTdZ93adU/maxresdefault.jpg" alt="آیا ساخت و ساز به صرفه است؟">
+                    <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                </a>
+                <div class="video-info">
+                    <h2 class="video-title">بازار مسکن به کدام سو می‌رود: آیا ساخت و ساز به‌صرفه است؟ تحلیل اخبار املاک</h2>
+                    <div class="video-meta">
+                        <span><i class="fa-regular fa-clock"></i> ساخت و ساز</span>
+                        <a href="https://www.youtube.com/watch?v=fIoTdZ93adU" target="_blank" rel="noopener" class="btn-watch">مشاهده در یوتیوب <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Features / Services -->
+        <div class="section-header">
+            <div class="section-title">
+                <i class="fa-solid fa-briefcase"></i>
+                خدمات و محورهای فعالیت
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>تحلیل بازار مسکن</h3>
+                <p>ارائه پیش‌بینی‌های دقیق از روند قیمت ملک، بررسی تورم انتظاری و تحلیل‌های اقتصادی.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h3>منتورینگ و آموزش املاک</h3>
+                <p>مربی‌گری و انتقال دانش تخصصی برای مشاوران املاک، سازندگان و فعالین بازار.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-comments"></i>
+                <h3>مشاوره اختصاصی</h3>
+                <p>بررسی پرونده‌های سرمایه‌گذاری، تهاتر و خرید و فروش‌های کلان ساختمانی.</p>
             </div>
         </div>
 
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>© تمامی حقوق برای <strong>مستر املاکی (امیر قیصری)</strong> محفوظ است.</p>
+        <p>تمامی حقوق برای وب‌سایت رسمی <strong>مستر املاکی (امیر قیصری)</strong> محفوظ است ©</p>
+        <p style="margin-top: 0.5rem;">
+            ارتباط در شبکه های اجتماعی: 
+            <a href="https://www.youtube.com/@amirgheysari" target="_blank" rel="noopener">یوتیوب</a> | 
+            <a href="https://t.me/mramlaki" target="_blank" rel="noopener">تلگرام</a> | 
+            <a href="https://www.aparat.com/mramlaki" target="_blank" rel="noopener">آپارات</a>
+        </p>
     </footer>
 
 </body>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستر املاکی | امیر قیصری - تحلیل بازار مسکن و منتورینگ املاک</title>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-gold: #e5a93b;
+            --accent-gold-hover: #f5b84c;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --youtube-red: #ff0000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-badge {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            box-shadow: 0 0 20px rgba(229, 169, 59, 0.2);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            max-width: 650px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid var(--accent-gold);
+            padding-right: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-box {
+            background: linear-gradient(90deg, #1f2937 0%, #111827 100%);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn-youtube {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background-color: var(--youtube-red);
+            color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-top: 1.2rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-youtube:hover {
+            transform: translateY(-2px);
+            background-color: #cc0000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-badge">
+            <i class="fa-solid fa-city"></i>
+        </div>
+        <h1>مستر املاکی | امیر قیصری</h1>
+        <div class="subtitle">بروکر و منتور تخصصی املاک | تحلیل‌گر بازار مسکن</div>
+        <p class="description">
+            تحلیل جامع و واقع‌بینانه وضعیت بازار املاک، پیش‌بینی قیمت‌ها، نقد تخصصی اخبار مسکن و آموزش و منتورینگ برای فعالان صنعت ساختمان و املاک.
+        </p>
+    </header>
+
+    <div class="container">
+        
+        <!-- کانال یوتیوب -->
+        <div class="cta-box">
+            <h2>دنبال‌کننده تحلیل‌های زنده بازار مسکن باشید</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;">
+                جدیدترین لایوها، پیش‌بینی‌های قیمتی و بررسی روند معاملاتی را در کانال یوتیوب مستر املاکی دنبال کنید.
+            </p>
+            <a href="https://www.youtube.com/@amirgheysari" target="_blank" class="btn-youtube">
+                <i class="fa-brands fa-youtube"></i> عضویت در کانال یوتیوب
+            </a>
+        </div>
+
+        <!-- محورهای فعالیت -->
+        <div class="section-title">
+            <i class="fa-solid fa-chart-line"></i>
+            محورهای تخصصی فعالیت
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <h3>تحلیل و پیش‌بینی بازار مسکن</h3>
+                <p>بررسی اثرات تورم، معاوضه و تهاتر، طلای مسکونی و سناریوهای اقتصادی بر قیمت ملک.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>منتورینگ و مشاوره املاک</h3>
+                <p>آموزش اصول حرفه‌ای مربی‌گری و مدیریت املاک برای مشاوران و فعالان صنعت ساخت‌وساز.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-video"></i></div>
+                <h3>لایوهای تخصصی و تحلیل اخبار</h3>
+                <p>برگزاری برنامه‌های زنده و گفتگوهای کارشناسی پیرامون آخرین تحولات بازار املاک کشور.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© تمامی حقوق برای <strong>مستر املاکی (امیر قیصری)</strong> محفوظ است.</p>
+    </footer>
+
+</body>
+</html>

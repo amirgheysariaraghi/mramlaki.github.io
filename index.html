@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مستر املاکی | آموزش و تحلیل بازار مسکن با ۲۵ سال سابقه</title>
     
-    <!-- ===== Meta Tags اصلی ===== -->
-    <title>مستر املاکی | آموزش و تحلیل بازار مسکن</title>
-    <meta name="description" content="مستر املاکی - آموزش ملکی، تحلیل بازار مسکن، مشاوره خرید و فروش ملک با امیر قیصری" />
-    <meta name="keywords" content="املاک, بازار مسکن, تحلیل ملک, خرید خانه, مشاوره املاک, مستر املاکی" />
+    <!-- Meta Tags اصلی -->
+    <meta name="description" content="مستر املاکی با ۲۵ سال سابقه در بازار مسکن - آموزش ملکی، تحلیل بازار، مشاوره خرید و فروش با امیر قیصری" />
+    <meta name="keywords" content="املاک, بازار مسکن, تحلیل ملک, خرید خانه, مشاوره املاک, مستر املاکی, امیر قیصری" />
     <link rel="canonical" href="https://mramlaki.ir" />
     
-    <!-- ===== Open Graph ===== -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mramlaki.ir" />
-    <meta property="og:title" content="مستر املاکی | آموزش و تحلیل بازار مسکن" />
+    <meta property="og:title" content="مستر املاکی | ۲۵ سال تجربه در بازار مسکن" />
     <meta property="og:description" content="آموزش ملکی، تحلیل روز بازار مسکن، مشاوره خرید و فروش با امیر قیصری" />
     <meta property="og:image" content="https://mramlaki.ir/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     
-    <!-- ===== Twitter Card ===== -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="مستر املاکی | آموزش و تحلیل بازار مسکن" />
+    <meta name="twitter:title" content="مستر املاکی | ۲۵ سال تجربه در بازار مسکن" />
     <meta name="twitter:description" content="با مستر املاکی بازار مسکن رو حرفه‌ای بخون" />
     <meta name="twitter:image" content="https://mramlaki.ir/og-image.jpg" />
     
-    <!-- ===== Schema Markup (ساختاریافته) ===== -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "مستر املاکی",
         "url": "https://mramlaki.ir",
-        "description": "آموزش ملکی، تحلیل بازار مسکن، مشاوره خرید و فروش ملک",
+        "description": "آموزش ملکی، تحلیل بازار مسکن، مشاوره خرید و فروش ملک با ۲۵ سال سابقه",
         "author": {
             "@type": "Person",
-            "name": "امیر قیصری"
+            "name": "امیر قیصری",
+            "jobTitle": "کارشناس مدیریت صنعتی",
+            "knowsAbout": ["بازار مسکن", "تحلیل ملک", "مشاوره خرید و فروش"],
+            "sameAs": [
+                "https://youtube.com/amirgheysari",
+                "https://aparat.com/mramlaki",
+                "https://t.me/mramlaki1",
+                "https://x.com/amirgheysaria",
+                "https://www.facebook.com/share/1FfTNVz1UC/"
+            ]
         }
     }
     </script>
     
-    <!-- ===== Tailwind CSS ===== -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -55,12 +64,14 @@
         }
     </script>
     
-    <!-- ===== فونت فارسی ===== -->
     <link href="https://cdn.fontcdn.ir/font/vazir/Vazir.css" rel="stylesheet" />
     <style>
-        body { font-family: Vazir, sans-serif; }
-        .bg-pattern { background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%); }
-        .hover-gold:hover { color: #c9a84c; transition: 0.3s; }
+        body { font-family: Vazir, sans-serif; background: #f0f2f5; }
+        .text-gold { color: #c9a84c; }
+        .bg-primary { background: #1a3c5e; }
+        .border-gold { border-color: #c9a84c; }
+        .hover-gold:hover { color: #c9a84c; }
+        .shadow-soft { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -73,19 +84,14 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .loading-pulse { animation: pulse 1.5s ease-in-out infinite; }
     </style>
 </head>
-<body class="bg-pattern">
+<body>
 
-    <!-- ===== هدر ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="bg-primary text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-            <a href="/" class="text-2xl font-bold text-gold">مستر املاکی</a>
+            <a href="https://mramlaki.ir" class="text-2xl font-bold text-gold">مستر املاکی</a>
             <nav class="flex gap-4 text-sm md:text-base flex-wrap">
                 <a href="#videos" class="hover:text-gold transition">ویدیوها</a>
                 <a href="#articles" class="hover:text-gold transition">مقالات</a>
@@ -96,85 +102,77 @@
         </div>
     </header>
 
-    <!-- ===== بخش Hero ===== -->
+    <!-- ===== HERO ===== -->
     <section class="container mx-auto px-4 py-12 text-center">
         <h1 class="text-3xl md:text-5xl font-bold text-primary mb-4">
             به <span class="text-gold">مستر املاکی</span> خوش آمدید
         </h1>
         <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-            آموزش ملکی، تحلیل بازار مسکن، مشاوره خرید و فروش با امیر قیصری
+            آموزش ملکی، تحلیل بازار مسکن، مشاوره خرید و فروش با <strong>۲۵ سال سابقه</strong>
         </p>
         <div class="flex justify-center gap-4 mt-6 flex-wrap">
             <a href="https://youtube.com/amirgheysari" target="_blank" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">یوتیوب</a>
             <a href="https://aparat.com/mramlaki" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">آپارات</a>
             <a href="https://t.me/mramlaki1" target="_blank" class="bg-blue-400 text-white px-6 py-2 rounded-full hover:bg-blue-500 transition">تلگرام</a>
             <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="bg-purple-500 text-white px-6 py-2 rounded-full hover:bg-purple-600 transition">بله</a>
+            <a href="https://x.com/amirgheysaria" target="_blank" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">𝕏 (توییتر)</a>
+            <a href="https://www.facebook.com/share/1FfTNVz1UC/" target="_blank" class="bg-blue-800 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition">فیسبوک</a>
         </div>
     </section>
 
-    <!-- ===== ویدیوهای یوتیوب ===== -->
+    <!-- ===== VIDEOS (YouTube) ===== -->
     <section id="videos" class="container mx-auto px-4 py-12">
         <h2 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-gold pr-4 mb-8">
             📺 آخرین ویدیوهای یوتیوب
         </h2>
         <div id="youtube-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="col-span-3 text-center text-gray-500 loading-pulse">در حال دریافت ویدیوها...</div>
+            <div class="col-span-3 text-center text-gray-500">در حال بارگذاری ویدیوها...</div>
         </div>
         <div class="text-center mt-6">
             <a href="https://youtube.com/amirgheysari" target="_blank" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition">همه ویدیوها در یوتیوب</a>
         </div>
     </section>
 
-    <!-- ===== ویدیوهای آپارات ===== -->
-    <section id="aparat-videos" class="container mx-auto px-4 py-12 bg-white/30 rounded-3xl">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-gold pr-4 mb-8">
-            📹 آخرین ویدیوهای آپارات
-        </h2>
-        <div id="aparat-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="col-span-3 text-center text-gray-500 loading-pulse">در حال دریافت ویدیوها...</div>
-        </div>
-        <div class="text-center mt-6">
-            <a href="https://aparat.com/mramlaki" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">همه ویدیوها در آپارات</a>
-        </div>
-    </section>
-
-    <!-- ===== مقالات (از GitHub Issues با برچسب article) ===== -->
-    <section id="articles" class="container mx-auto px-4 py-12">
+    <!-- ===== ARTICLES (GitHub Issues) ===== -->
+    <section id="articles" class="container mx-auto px-4 py-12 bg-white/50 rounded-3xl">
         <h2 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-gold pr-4 mb-8">
             📝 آخرین مقالات تحلیل بازار مسکن
         </h2>
         <div id="articles-container" class="grid md:grid-cols-2 gap-6">
-            <div class="col-span-2 text-center text-gray-500 loading-pulse">در حال دریافت مقالات...</div>
+            <div class="col-span-2 text-center text-gray-500">در حال دریافت مقالات...</div>
         </div>
     </section>
 
-    <!-- ===== آگهی‌های ملکی (از GitHub Issues با برچسب property) ===== -->
-    <section id="properties" class="container mx-auto px-4 py-12 bg-white/30 rounded-3xl">
+    <!-- ===== PROPERTIES (GitHub Issues) ===== -->
+    <section id="properties" class="container mx-auto px-4 py-12">
         <h2 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-gold pr-4 mb-8">
             🏠 آخرین آگهی‌های فروش ملک
         </h2>
         <div id="properties-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="col-span-3 text-center text-gray-500 loading-pulse">در حال دریافت آگهی‌ها...</div>
+            <div class="col-span-3 text-center text-gray-500">در حال دریافت آگهی‌ها...</div>
         </div>
     </section>
 
-    <!-- ===== درباره من ===== -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="container mx-auto px-4 py-12">
         <div class="bg-primary text-white rounded-2xl p-8 md:p-12 shadow-xl">
             <h2 class="text-3xl font-bold text-gold mb-4">امیر قیصری | مستر املاکی</h2>
             <p class="text-lg leading-8 max-w-3xl">
-                من امیر قیصری هستم، با بیش از ۱۰ سال تجربه در بازار مسکن. هدفم اینه که با آموزش‌های ساده و تحلیل‌های دقیق، بهت کمک کنم بهترین تصمیم رو برای خرید، فروش یا سرمایه‌گذاری ملکی بگیری.
+                من امیر قیصری هستم، با <strong>۲۵ سال سابقه</strong> در بازار مسکن و کارشناس مدیریت صنعتی. 
+                هدفم اینه که با آموزش‌های ساده و تحلیل‌های دقیق، بهت کمک کنم بهترین تصمیم رو برای خرید، فروش یا سرمایه‌گذاری ملکی بگیری.
             </p>
             <div class="flex flex-wrap gap-4 mt-6">
                 <a href="https://youtube.com/amirgheysari" target="_blank" class="bg-red-500 px-5 py-2 rounded-full hover:bg-red-600">یوتیوب</a>
                 <a href="https://aparat.com/mramlaki" target="_blank" class="bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-600">آپارات</a>
                 <a href="https://t.me/mramlaki1" target="_blank" class="bg-blue-400 px-5 py-2 rounded-full hover:bg-blue-500">تلگرام</a>
                 <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="bg-purple-500 px-5 py-2 rounded-full hover:bg-purple-600">بله</a>
+                <a href="https://x.com/amirgheysaria" target="_blank" class="bg-gray-700 px-5 py-2 rounded-full hover:bg-gray-800">𝕏</a>
+                <a href="https://www.facebook.com/share/1FfTNVz1UC/" target="_blank" class="bg-blue-700 px-5 py-2 rounded-full hover:bg-blue-800">فیسبوک</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== فرم ارسال آگهی (به تلگرام) ===== -->
+    <!-- ===== CONTACT FORM ===== -->
     <section id="contact" class="container mx-auto px-4 py-12">
         <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl max-w-3xl mx-auto">
             <h2 class="text-2xl font-bold text-primary text-center mb-6">📩 ارسال آگهی ملکی</h2>
@@ -214,25 +212,28 @@
         </div>
     </section>
 
-    <!-- ===== فوتر ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="bg-gray-900 text-white py-8 mt-12">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gold text-xl font-bold">مستر املاکی</p>
-            <p class="text-sm text-gray-400 mt-2">تمامی حقوق محفوظ است © ۱۴۰۵</p>
-            <div class="flex justify-center gap-4 mt-4 text-sm">
+            <p class="text-sm text-gray-400 mt-2">با ۲۵ سال تجربه در بازار مسکن</p>
+            <div class="flex justify-center gap-4 mt-4 text-sm flex-wrap">
                 <a href="https://youtube.com/amirgheysari" target="_blank" class="hover:text-gold">یوتیوب</a>
                 <a href="https://aparat.com/mramlaki" target="_blank" class="hover:text-gold">آپارات</a>
                 <a href="https://t.me/mramlaki1" target="_blank" class="hover:text-gold">تلگرام</a>
                 <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="hover:text-gold">بله</a>
+                <a href="https://x.com/amirgheysaria" target="_blank" class="hover:text-gold">𝕏</a>
+                <a href="https://www.facebook.com/share/1FfTNVz1UC/" target="_blank" class="hover:text-gold">فیسبوک</a>
             </div>
+            <p class="text-xs text-gray-500 mt-4">تمامی حقوق محفوظ است © ۱۴۰۵</p>
         </div>
     </footer>
 
     <!-- ========================================================== -->
-    <!-- ===== اسکریپت اصلی با مقادیر شما ===== -->
+    <!-- ===== SCRIPT ===== -->
     <!-- ========================================================== -->
     <script>
-        // ===== تنظیمات (مقادیر شما) =====
+        // ===== تنظیمات =====
         const REPO_OWNER = 'amirgheysari';
         const REPO_NAME = 'mramlaki';
         const YOUTUBE_CHANNEL_ID = 'UCC5VMPT7fbZs4gCE-G4Qwng';
@@ -242,21 +243,23 @@
         // ===== 1. دریافت ویدیوهای یوتیوب =====
         fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`)
             .then(res => res.text())
-            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-            .then(data => {
+            .then(str => {
+                const data = new window.DOMParser().parseFromString(str, "text/xml");
                 const entries = data.querySelectorAll('entry');
                 const container = document.getElementById('youtube-container');
+                
                 if (entries.length === 0) {
                     container.innerHTML = '<p class="col-span-3 text-center text-gray-500">ویدیویی یافت نشد</p>';
                     return;
                 }
+                
                 container.innerHTML = Array.from(entries).slice(0, 6).map(entry => {
                     const title = entry.querySelector('title').textContent;
                     const link = entry.querySelector('link').getAttribute('href');
                     const videoId = link.split('v=')[1];
                     const published = new Date(entry.querySelector('published').textContent).toLocaleDateString('fa');
                     return `
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition">
                             <div class="relative" style="padding-bottom: 56.25%; height: 0;">
                                 <iframe 
                                     class="absolute top-0 left-0 w-full h-full"
@@ -281,47 +284,7 @@
                 document.getElementById('youtube-container').innerHTML = '<p class="col-span-3 text-center text-gray-500">دریافت ویدیوهای یوتیوب با مشکل مواجه شد.</p>';
             });
 
-        // ===== 2. دریافت ویدیوهای آپارات =====
-        fetch('https://www.aparat.com/etc/api/videosByUser/username/mramlaki')
-            .then(res => res.json())
-            .then(data => {
-                const videos = data.videosByUser;
-                const container = document.getElementById('aparat-container');
-                if (!videos || videos.length === 0) {
-                    container.innerHTML = '<p class="col-span-3 text-center text-gray-500">ویدیویی یافت نشد</p>';
-                    return;
-                }
-                container.innerHTML = videos.slice(0, 6).map(video => {
-                    const title = video.title;
-                    const videoId = video.uid;
-                    const visitCount = video.visit_cnt;
-                    return `
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                            <div class="relative" style="padding-bottom: 56.25%; height: 0;">
-                                <iframe 
-                                    class="absolute top-0 left-0 w-full h-full"
-                                    src="https://www.aparat.com/video/video/embed/videohash/${videoId}/vt/frame" 
-                                    title="${title}"
-                                    frameborder="0" 
-                                    allowfullscreen
-                                    loading="lazy"
-                                    allow="autoplay; encrypted-media">
-                                </iframe>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-primary line-clamp-2">${title}</h3>
-                                <p class="text-gray-600 text-sm">👁 ${parseInt(visitCount).toLocaleString('fa')} بازدید</p>
-                                <a href="https://aparat.com/v/${videoId}" target="_blank" class="text-gold font-bold text-sm inline-block hover:underline mt-1">مشاهده در آپارات ↗</a>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            })
-            .catch(() => {
-                document.getElementById('aparat-container').innerHTML = '<p class="col-span-3 text-center text-gray-500">دریافت ویدیوهای آپارات با مشکل مواجه شد.</p>';
-            });
-
-        // ===== 3. دریافت مقالات از GitHub Issues (برچسب: article) =====
+        // ===== 2. دریافت مقالات از GitHub Issues =====
         fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/issues?labels=article&state=open&per_page=6&sort=created&direction=desc`)
             .then(res => res.json())
             .then(issues => {
@@ -335,7 +298,7 @@
                     const body = issue.body || '';
                     const cleanText = body.replace(/[#*`>]/g, '').substring(0, 150) + '...';
                     return `
-                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition border-b-4 border-gold">
+                        <div class="bg-white p-6 rounded-xl shadow-soft hover:shadow-lg transition border-r-4 border-gold">
                             <span class="text-gold text-sm">📅 ${date}</span>
                             <h3 class="font-bold text-xl text-primary mt-1 line-clamp-2">${issue.title}</h3>
                             <p class="text-gray-700 mt-2 line-clamp-3">${cleanText}</p>
@@ -348,7 +311,7 @@
                 document.getElementById('articles-container').innerHTML = '<p class="col-span-2 text-center text-gray-500">دریافت مقالات با مشکل مواجه شد.</p>';
             });
 
-        // ===== 4. دریافت آگهی‌های ملکی از GitHub Issues (برچسب: property) =====
+        // ===== 3. دریافت آگهی‌های ملکی از GitHub Issues =====
         fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/issues?labels=property&state=open&per_page=6&sort=created&direction=desc`)
             .then(res => res.json())
             .then(issues => {
@@ -374,7 +337,7 @@
                     const cleanDesc = body.replace(/[#*`>]/g, '').substring(0, 100) + '...';
                     
                     return `
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition">
                             <img src="${image}" alt="${issue.title}" class="w-full h-48 object-cover" loading="lazy" />
                             <div class="p-4">
                                 <h3 class="font-bold text-primary line-clamp-2">${issue.title}</h3>
@@ -395,7 +358,7 @@
                 document.getElementById('properties-container').innerHTML = '<p class="col-span-3 text-center text-gray-500">دریافت آگهی‌ها با مشکل مواجه شد.</p>';
             });
 
-        // ===== 5. فرم ارسال آگهی به تلگرام =====
+        // ===== 4. فرم ارسال آگهی به تلگرام =====
         document.getElementById('property-form').addEventListener('submit', function(e) {
             e.preventDefault();
             

@@ -237,9 +237,7 @@
         const REPO_OWNER = 'amirgheysari';
         const REPO_NAME = 'mramlaki';
         const YOUTUBE_CHANNEL_ID = 'UCC5VMPT7fbZs4gCE-G4Qwng';
-        const BOT_TOKEN = '8980258274:AAGwXH-PSpQ1UUDfubk28bhr1KwSucVaF_g';
-        const CHAT_ID = '8980258274';
-
+const BOT_TOKEN = '{{ secrets.TELEGRAM_BOT_TOKEN }}';        const CHAT_ID = '8980258274';
         // ===== 1. دریافت ویدیوهای یوتیوب =====
         fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`)
             .then(res => res.text())

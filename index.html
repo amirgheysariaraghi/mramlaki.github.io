@@ -6,12 +6,15 @@
     <title>مستر املاکی | امیر قیصری - آموزش و تحلیل بازار مسکن</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="سایت رسمی مستر املاکی (امیر قیصری). آموزش مشاورین املاک، تحلیل روز بازار مسکن و سرمایه‌گذاری ملکی.">
-    <meta name="keywords" content="مستر املاکی, امیر قیصری, آموزش املاک, تحلیل بازار مسکن">
+    <meta name="description" content="سایت رسمی مستر املاکی (امیر قیصری). آموزش تخصصی مشاورین املاک و تحلیل روز بازار مسکن.">
     <meta name="author" content="امیر قیصری">
     
-    <!-- FontAwesome Local/Fast CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <!-- Open Graph (برای پیش‌نمایش در تلگرام و شبکه‌های اجتماعی) -->
+    <meta property="og:title" content="مستر املاکی | امیر قیصری">
+    <meta property="og:image" content="https://mramlaki.ir/og-image.jpg">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -22,14 +25,14 @@
             --btn-red: #dc2626;
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
-            --radius: 16px;
+            --radius: 14px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Tahoma, 'Vazirmatn', sans-serif;
+            font-family: Tahoma, 'Segoe UI', sans-serif;
         }
 
         body {
@@ -43,15 +46,15 @@
         header {
             background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(8px);
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+            border-bottom: 2px solid var(--accent-amber);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -61,19 +64,11 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-
-        .logo-area img {
-            width: 45px;
-            height: 45px;
-            border-radius: 8px;
-            background: #fff;
-            padding: 2px;
+            gap: 10px;
         }
 
         .logo-area h1 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--accent-warm);
             font-weight: bold;
         }
@@ -81,8 +76,8 @@
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            margin-right: 18px;
-            font-size: 0.95rem;
+            margin-right: 15px;
+            font-size: 0.88rem;
             transition: color 0.3s;
         }
 
@@ -90,63 +85,67 @@
             color: var(--accent-warm);
         }
 
-        /* Hero Banner with Warm Urban Glow */
-        .hero {
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, #0f172a 100%), 
-                        radial-gradient(circle at center, rgba(217, 119, 6, 0.25) 0%, transparent 70%);
-            padding: 4rem 1rem 3rem;
+        /* Banner Header Section with og-image.jpg */
+        .hero-banner {
+            max-width: 1100px;
+            margin: 1.5rem auto 0;
+            padding: 0 1rem;
+        }
+
+        .banner-img-container {
+            width: 100%;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .banner-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-intro {
             text-align: center;
+            padding: 1.5rem 1rem;
         }
 
-        .hero h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.8rem;
-        }
+        .hero-intro h2 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+        .hero-intro h2 span { color: var(--accent-warm); }
+        .hero-intro p { color: var(--text-muted); font-size: 0.95rem; max-width: 700px; margin: 0 auto 1.2rem; }
 
-        .hero h2 span { color: var(--accent-warm); }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 750px;
-            margin: 0 auto 2rem;
-        }
-
-        /* Action Buttons */
+        /* Social Action Buttons */
         .social-buttons {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .btn-action {
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 8px 18px;
+            border-radius: 25px;
             text-decoration: none;
             color: #fff;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: bold;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            gap: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
         }
 
-        .btn-action:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
-        }
-
+        .btn-action:hover { transform: translateY(-2px); }
         .youtube { background-color: var(--btn-red); }
         .aparat { background-color: #ed145b; }
         .telegram { background-color: #0088cc; }
         .bale { background-color: #10b981; }
 
-        /* Container & Cards */
+        /* Container & Grid Layout */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -154,34 +153,29 @@
         .section-title {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 1.5rem;
+            gap: 8px;
+            margin-bottom: 1.2rem;
             color: var(--accent-warm);
-            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
-            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+            padding-bottom: 0.4rem;
+            font-size: 1.1rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.8rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: var(--radius);
             overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-warm);
-        }
-
-        /* Responsive Video Box */
+        /* Video Embed */
         .video-box {
             position: relative;
             padding-bottom: 56.25%;
@@ -198,81 +192,78 @@
             border: 0;
         }
 
-        .card-body { padding: 1.2rem; }
-        .card-body h4 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff; }
-        .card-body p { font-size: 0.9rem; color: var(--text-muted); }
-
-        /* Bio Profile Section */
-        .profile-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid var(--accent-amber);
-            border-radius: var(--radius);
-            padding: 2rem;
+        .yt-box {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1rem;
             text-align: center;
-            gap: 1.2rem;
-            margin-bottom: 3rem;
+            background: #111827;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .profile-card h3 { color: var(--accent-warm); font-size: 1.5rem; }
-        .profile-card p { max-width: 800px; color: #cbd5e1; font-size: 1rem; }
+        .card-body { padding: 1rem; }
+        .card-body h4 { font-size: 1rem; margin-bottom: 0.4rem; color: #fff; }
+        .card-body p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* Form Design */
+        /* Bio Profile */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .profile-card h3 { color: var(--accent-warm); font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .profile-card p { color: #cbd5e1; font-size: 0.9rem; }
+
+        /* Form */
         .form-card {
             background: var(--bg-card);
-            border: 1px solid rgba(245, 158, 11, 0.3);
             border-radius: var(--radius);
-            padding: 2rem;
-            max-width: 650px;
-            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
         }
 
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--accent-warm); }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.3rem; font-size: 0.85rem; color: var(--accent-warm); }
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             background: #0f172a;
             border: 1px solid #334155;
-            border-radius: 8px;
+            border-radius: 6px;
             color: #fff;
-            font-size: 0.95rem;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-warm);
+            font-size: 0.9rem;
         }
 
         .btn-submit {
-            background: linear-gradient(90deg, var(--accent-amber), var(--accent-warm));
+            background: var(--accent-amber);
             color: #000;
             border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 10px 18px;
+            border-radius: 6px;
             width: 100%;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             cursor: pointer;
-            transition: opacity 0.3s;
         }
-
-        .btn-submit:hover { opacity: 0.9; }
 
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1.2rem;
             background: #090d16;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
         }
 
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 10px; }
-            .hero h2 { font-size: 1.6rem; }
+        @media (max-width: 600px) {
+            .nav-container { flex-direction: column; gap: 8px; }
+            .hero-intro h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -281,62 +272,70 @@
     <header>
         <div class="nav-container">
             <div class="logo-area">
-                <!-- آدرس لوگوی خانه‌ای که آپلود کردید -->
-                <img src="1000015877.jpg" alt="لوگو مستر املاکی">
+                <i class="fas fa-building" style="color: var(--accent-warm); font-size: 1.3rem;"></i>
                 <h1>مستر املاکی</h1>
             </div>
             <nav class="nav-links">
                 <a href="#videos">ویدیوها</a>
                 <a href="#articles">مقالات</a>
                 <a href="#about">درباره من</a>
-                <a href="#contact">ارتباط مستقیم</a>
+                <a href="#contact">ارتباط</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h2>به وب‌سایت رسمی <span>مستر املاکی</span> خوش آمدید</h2>
-        <p>آموزش تخصصی مشاورین املاک، تحلیل روز بازار مسکن و راهکارهای هوشمندانه سرمایه‌گذاری توسط امیر قیصری</p>
-        
-        <div class="social-buttons">
-            <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube"><i class="fab fa-youtube"></i> کانال یوتیوب</a>
-            <a href="https://www.aparat.com/mramlaki" target="_blank" class="btn-action aparat"><i class="fas fa-video"></i> کانال آپارات</a>
-            <a href="https://t.me/+hrZP7cNcvPtkM2M0" target="_blank" class="btn-action telegram"><i class="fab fa-telegram"></i> تلگرام</a>
-            <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="btn-action bale"><i class="fas fa-comments"></i> پیام‌رسان بله</a>
+    <!-- نمایش بنر اصلی از فایل og-image.jpg -->
+    <div class="hero-banner">
+        <div class="banner-img-container">
+            <img src="og-image.jpg" alt="بنر رسمی مستر املاکی">
         </div>
-    </section>
+        
+        <div class="hero-intro">
+            <h2>به وب‌سایت رسمی <span>مستر املاکی</span> خوش آمدید</h2>
+            <p>آموزش تخصصی مشاورین املاک و تحلیل بازار مسکن توسط امیر قیصری</p>
+            
+            <div class="social-buttons">
+                <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube"><i class="fab fa-youtube"></i> یوتیوب</a>
+                <a href="https://www.aparat.com/mramlaki" target="_blank" class="btn-action aparat"><i class="fas fa-video"></i> آپارات</a>
+                <a href="https://t.me/+hrZP7cNcvPtkM2M0" target="_blank" class="btn-action telegram"><i class="fab fa-telegram"></i> تلگرام</a>
+                <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="btn-action bale"><i class="fas fa-comments"></i> بله</a>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
 
-        <!-- ویدیوهای منتخب (سازگار با اینترنت ایران) -->
+        <!-- بخش ویدیوها -->
         <section id="videos">
             <div class="section-title">
-                <i class="fas fa-play-circle fa-lg"></i>
+                <i class="fas fa-play-circle"></i>
                 <h3>آخرین ویدیوها و دوره‌های آموزشی</h3>
             </div>
             
             <div class="grid">
-                <!-- ویدیو آپارات (بدون نیاز به فیلترشکن) -->
+                <!-- ویدیو آپارات بدون مشکل سیاه شدن -->
                 <div class="card">
                     <div class="video-box">
-                        <iframe src="https://www.aparat.com/video/video/embed/videohash/v238118/vt/frame" title="ویدیو مستر املاکی" allowfullscreen></iframe>
+                        <iframe src="https://www.aparat.com/video/video/embed/videohash/v238118/vt/frame" allowfullscreen></iframe>
                     </div>
                     <div class="card-body">
-                        <h4>دوره طلایی مستر املاکی: بنگاه سنتی یا مدرن؟</h4>
-                        <p>بررسی قدم‌های اولیه موفقیت و استراتژی‌های نوین در مشاوری املاک.</p>
+                        <h4>دوره آموزشی و تحلیل‌های آپارات</h4>
+                        <p>مشاهده مستقیم ویدیوها و ولاگ‌های آموزشی بدون فیلترشکن.</p>
                     </div>
                 </div>
 
-                <!-- لینک سریع به یوتیوب -->
+                <!-- باکس اختصاصی یوتیوب -->
                 <div class="card">
-                    <div class="video-box" style="display:flex; align-items:center; justify-content:center; background:#1e293b;">
-                        <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube" style="padding: 15px 25px; font-size: 1.1rem;">
-                            <i class="fab fa-youtube fa-lg"></i> مشاهده آرشیو در یوتیوب
+                    <div class="yt-box">
+                        <i class="fab fa-youtube fa-3x" style="color: #ff0000; margin-bottom: 12px;"></i>
+                        <h4 style="margin-bottom: 12px; font-size: 1.1rem;">کانال رسمی یوتیوب</h4>
+                        <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube">
+                            ورود به کانال یوتیوب
                         </a>
                     </div>
                     <div class="card-body">
-                        <h4>تحلیل‌های اختصاصی و لایوهای یوتیوب</h4>
-                        <p>برای دسترسی به تمام قسمت‌ها و تحلیل‌های هفتگی، کانال یوتیوب را دنبال کنید.</p>
+                        <h4>تحلیل‌های اقتصادی و لایوها</h4>
+                        <p>برای دسترسی به تمام ویدیوها و تحلیل‌های هفتگی کانال را دنبال کنید.</p>
                     </div>
                 </div>
             </div>
@@ -345,36 +344,36 @@
         <!-- مقالات -->
         <section id="articles">
             <div class="section-title">
-                <i class="fas fa-newspaper fa-lg"></i>
-                <h3>تحلیل‌ها و مقالات آموزشی</h3>
+                <i class="fas fa-newspaper"></i>
+                <h3>مقالات و تحلیل‌ها</h3>
             </div>
             <div class="grid">
                 <article class="card">
                     <div class="card-body">
                         <h4>تحلیل شاخص قیمت به اجاره (P/R)</h4>
-                        <p>ارزیابی ارزش ملک و تشخیص بهترین زمان برای خرید یا فروش در شرایط تورمی.</p>
+                        <p>ارزیابی ارزش ملک و تشخیص بهترین زمان برای خرید یا فروش.</p>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-body">
                         <h4>اصول قراردادنویسی و استعلامات ثبتی</h4>
-                        <p>نکات حقوقی مهم برای مشاورین املاک در بررسی اسناد رسمی و ملک‌های دماوند و گرمابسرد.</p>
+                        <p>نکات حقوقی برای مشاورین املاک و استعلام اسناد رسمی.</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- درباره امیر قیصری -->
+        <!-- درباره من -->
         <section id="about" class="profile-card">
             <h3>امیر قیصری | مستر املاکی</h3>
-            <p>کارشناس مدیریت صنعتی، بروکر و منتور املاک. هدف من ارتقای سطح دانش مشاورین املاک و ارائه تحلیل‌های اقتصادی دقیق برای اتخاذ بهترین تصمیمات سرمایه‌گذاری ملکی است.</p>
+            <p>کارشناس مدیریت صنعتی، بروکر و منتور املاک. ارائه تحلیل‌های اقتصادی دقیق و آموزش‌های کاربردی برای مشاورین املاک.</p>
         </section>
 
-        <!-- فرم ارسال پیام متصل به تلگرام/بله -->
+        <!-- فرم ارتباط -->
         <section id="contact" class="form-card">
             <div class="section-title" style="justify-content: center; border: none;">
-                <h3>📩 ارسال پیام و استعلام مستقیم</h3>
+                <h3>📩 ارسال پیام مستقیم</h3>
             </div>
             <form onsubmit="sendToTelegram(event)">
                 <div class="form-group">
@@ -387,9 +386,9 @@
                 </div>
                 <div class="form-group">
                     <label>متن پیام یا مشخصات ملک:</label>
-                    <textarea id="formMessage" rows="4" placeholder="توضیحات خود را بنویسید..."></textarea>
+                    <textarea id="formMessage" rows="3" placeholder="توضیحات خود را بنویسید..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit"><i class="fab fa-telegram-plane"></i> ارسال مستقیم پیام</button>
+                <button type="submit" class="btn-submit">ارسال پیام به تلگرام</button>
             </form>
         </section>
 
@@ -406,7 +405,7 @@
             const phone = document.getElementById('formPhone').value;
             const msg = document.getElementById('formMessage').value;
             
-            const text = `پیام جدید از سایت mramlaki.ir:%0A👤 نام: ${encodeURIComponent(name)}%0A📞 تماس: ${encodeURIComponent(phone)}%0A📝 متن: ${encodeURIComponent(msg)}`;
+            const text = `پیام جدید از mramlaki.ir:%0A👤 نام: ${encodeURIComponent(name)}%0A📞 تماس: ${encodeURIComponent(phone)}%0A📝 متن: ${encodeURIComponent(msg)}`;
             
             window.open(`https://t.me/+hrZP7cNcvPtkM2M0?text=${text}`, '_blank');
         }

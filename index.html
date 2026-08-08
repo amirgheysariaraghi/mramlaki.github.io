@@ -7,7 +7,7 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="سایت رسمی مستر املاک (امیر قیصری). تحلیل روز بازار مسکن، آموزش خرید و فروش ملک، ویدیوهای یوتیوب و آپارات.">
-    <meta name="keywords" content="مستر املاک, امیر قیصری, تحلیل بازار مسکن, سرمایه گذاری ملک, املاک دماوند">
+    <meta name="keywords" content="مستر املاک, امیر قیصری, تحلیل بازار مسکن, سرمایه گذاری ملک">
     <meta name="author" content="امیر قیصری">
     
     <!-- FontAwesome Icons -->
@@ -298,24 +298,24 @@
                 <!-- ویدیو یوتیوب -->
                 <div class="card">
                     <div class="video-container">
-                        <!-- لینک کانال/ویدیو یوتیوب شما -->
-                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UU" title="یوتیوب مستر املاک" allowfullscreen></iframe>
+                        <!-- نمونه کد ویدیو امبد یوتیوب -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ویدیو یوتیوب مستر املاک" allowfullscreen></iframe>
                     </div>
                     <div class="card-body">
-                        <h4>کانال رسمی یوتیوب</h4>
-                        <p>برای مشاهده جدیدترین لایوها و تحلیل‌های ویدیویی بازار مسکن به یوتیوب ما بپیوندید.</p>
+                        <h4>ویدیوهای تحلیل یوتیوب</h4>
+                        <p>برای مشاهده بقیه ویدیوها به <a href="https://www.youtube.com/amirgheysari" target="_blank">کانال یوتیوب ما</a> مراجعه کنید.</p>
                     </div>
                 </div>
 
                 <!-- ویدیو آپارات -->
                 <div class="card">
                     <div class="video-container">
-                        <!-- ویدیوی آپارات -->
-                        <iframe src="https://www.aparat.com/video/video/embed/videohash/mramlaki/vt/frame" title="آپارات مستر املاک" allowfullscreen></iframe>
+                        <!-- ویدیوی نمونه لود شده از آپارات -->
+                        <iframe src="https://www.aparat.com/video/video/embed/videohash/v238118/vt/frame" title="ویدیو آپارات مستر املاک" allowfullscreen></iframe>
                     </div>
                     <div class="card-body">
-                        <h4>کانال رسمی آپارات</h4>
-                        <p>ویدیوها و ولاگ‌های آموزشی خرید و فروش ملک در کانال آپارات مستر املاک.</p>
+                        <h4>ولاگ‌های آموزشی آپارات</h4>
+                        <p>برای مشاهده آرشیو کامل به <a href="https://www.aparat.com/mramlaki" target="_blank">کانال آپارات مستر املاک</a> سر بزنید.</p>
                     </div>
                 </div>
             </div>
@@ -354,25 +354,25 @@
             </div>
         </section>
 
-        <!-- فرم ارتباط / ارسال آگهی -->
+        <!-- فرم ارتباط / ارسال آگهی متصل به تلگرام/بله -->
         <section id="contact" class="form-card">
             <div class="section-header" style="justify-content: center; border: none;">
                 <h3>📩 ارسال پیام و استعلام ملک</h3>
             </div>
-            <form action="https://formspree.io/f/mknlaajk" method="POST">
+            <form id="contactForm" onsubmit="sendToTelegram(event)">
                 <div class="form-group">
                     <label>نام و نام خانوادگی:</label>
-                    <input type="text" name="name" required placeholder="مثال: علی محمدی">
+                    <input type="text" id="formName" required placeholder="مثال: علی محمدی">
                 </div>
                 <div class="form-group">
                     <label>شماره تماس:</label>
-                    <input type="tel" name="phone" required placeholder="۰۹۱۲XXXXXXX">
+                    <input type="tel" id="formPhone" required placeholder="۰۹۱۲XXXXXXX">
                 </div>
                 <div class="form-group">
                     <label>توضیحات یا مشخصات ملک:</label>
-                    <textarea name="message" rows="4" placeholder="متن پیام یا جزئیات ملک خود را وارد کنید..."></textarea>
+                    <textarea id="formMessage" rows="4" placeholder="متن پیام یا جزئیات ملک خود را وارد کنید..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit">ارسال پیام</button>
+                <button type="submit" class="btn-submit"><i class="fab fa-telegram-plane"></i> ارسال مستقیم پیام</button>
             </form>
         </section>
 
@@ -382,5 +382,18 @@
         <p>تمامی حقوق این وب‌سایت متعلق به <strong>امیر قیصری (مستر املاک)</strong> می‌باشد © ۱۴۰۵</p>
     </footer>
 
+    <script>
+        function sendToTelegram(event) {
+            event.preventDefault();
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const msg = document.getElementById('formMessage').value;
+            
+            const text = `سلام، پیام جدید از سایت مستر املاک:%0A👤 نام: ${encodeURIComponent(name)}%0A📞 تماس: ${encodeURIComponent(phone)}%0A📝 متن: ${encodeURIComponent(msg)}`;
+            
+            // هدایت کاربر به گروه/پیام تلگرام با متن پر شده
+            window.open(`https://t.me/+hrZP7cNcvPtkM2M0?text=${text}`, '_blank');
+        }
+    </script>
 </body>
 </html>

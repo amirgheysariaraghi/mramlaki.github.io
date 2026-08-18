@@ -85,7 +85,7 @@
             color: var(--accent-warm);
         }
 
-        /* Banner Header Section with og-image.jpg */
+        /* Hero Banner */
         .hero-banner {
             max-width: 1100px;
             margin: 1.5rem auto 0;
@@ -173,6 +173,9 @@
             border-radius: var(--radius);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Video Embed */
@@ -203,9 +206,24 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .card-body { padding: 1rem; }
-        .card-body h4 { font-size: 1rem; margin-bottom: 0.4rem; color: #fff; }
-        .card-body p { font-size: 0.85rem; color: var(--text-muted); }
+        .card-body { padding: 1.2rem; }
+        .card-body h4 { font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff; }
+        .card-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
+
+        .btn-read-more {
+            color: var(--accent-warm);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+
+        .btn-read-more:hover {
+            color: #fff;
+        }
 
         /* Bio Profile */
         .profile-card {
@@ -284,7 +302,7 @@
         </div>
     </header>
 
-    <!-- نمایش بنر اصلی از فایل og-image.jpg -->
+    <!-- بنر اصلی -->
     <div class="hero-banner">
         <div class="banner-img-container">
             <img src="og-image.jpg" alt="بنر رسمی مستر املاکی">
@@ -313,18 +331,16 @@
             </div>
             
             <div class="grid">
-                <!-- ویدیو آپارات بدون مشکل سیاه شدن -->
                 <div class="card">
                     <div class="video-box">
                         <iframe src="https://www.aparat.com/video/video/embed/videohash/v238118/vt/frame" allowfullscreen></iframe>
                     </div>
                     <div class="card-body">
                         <h4>دوره آموزشی و تحلیل‌های آپارات</h4>
-                        <p>مشاهده مستقیم ویدیوها و ولاگ‌های آموزشی بدون فیلترشکن.</p>
+                        <p>مشاهده مستقیم ویدیوها و ولاگ‌های آموزشی بدون نیاز به فیلترشکن.</p>
                     </div>
                 </div>
 
-                <!-- باکس اختصاصی یوتیوب -->
                 <div class="card">
                     <div class="yt-box">
                         <i class="fab fa-youtube fa-3x" style="color: #ff0000; margin-bottom: 12px;"></i>
@@ -341,26 +357,31 @@
             </div>
         </section>
 
-        <!-- مقالات -->
+        <!-- بخش مقالات و تحلیل‌ها -->
         <section id="articles">
             <div class="section-title">
                 <i class="fas fa-newspaper"></i>
-                <h3>مقالات و تحلیل‌ها</h3>
+                <h3>جدیدترین مقالات و تحلیل‌ها</h3>
             </div>
             <div class="grid">
+                
+                <!-- کارت مقاله جدید سانتی‌متری -->
                 <article class="card">
                     <div class="card-body">
-                        <h4>تحلیل شاخص قیمت به اجاره (P/R)</h4>
-                        <p>ارزیابی ارزش ملک و تشخیص بهترین زمان برای خرید یا فروش.</p>
+                        <h4>خرید و فروش خانه‌های سانتی‌متری؛ فرصت یا دام حقوقی؟</h4>
+                        <p>تحلیل کامل طرح فروش خرد مسکن، بررسی ابهامات قدرالسهم مشاعات، پارکینگ، انباری و هزینه‌های شارژ.</p>
+                        <a href="cm-housing.html" class="btn-read-more">مطالعه کامل مقاله <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-body">
-                        <h4>اصول قراردادنویسی و استعلامات ثبتی</h4>
-                        <p>نکات حقوقی برای مشاورین املاک و استعلام اسناد رسمی.</p>
+                        <h4>تحلیل شاخص قیمت به اجاره (P/R) در بازار املاک</h4>
+                        <p>ارزیابی ارزش واقعی ملک و تشخیص بهترین زمان برای ورود به بازار خرید یا فروش.</p>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">به‌زودی...</span>
                     </div>
                 </article>
+
             </div>
         </section>
 

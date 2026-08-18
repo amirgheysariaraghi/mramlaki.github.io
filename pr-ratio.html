@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاخص P/R یا دماسنج بازار مسکن چیست؟ | مستر املاکی</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="آموزش ساده محاسبه شاخص P/R (نسبت قیمت به اجاره) در بازار املاک ایران به قلم امیر قیصری. تحلیل طرح ۱۰ هزار مسکن استیجاری دولتی و بررسی لایو اخیر.">
+    <meta name="keywords" content="شاخص PR مسکن, دماسنج بازار املاک, نسبت قیمت به اجاره, امیر قیصری, مسکن استیجاری, مستر املاکی">
+    <meta name="author" content="امیر قیصری">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="شاخص P/R؛ دماسنج هوشمند بازار مسکن | مستر املاکی">
+    <meta property="og:description" content="چگونه تشخیص دهیم الان وقت خریده یا اجاره‌نشینی؟ بررسی شاخص P/R با مثال‌های ساده و تحلیل اخبار اخیر مسکن.">
+    <meta property="og:image" content="https://mramlaki.ir/og-image.jpg">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-warm: #f59e0b;
+            --accent-amber: #d97706;
+            --btn-red: #dc2626;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.9;
+            direction: rtl;
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-amber);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--accent-warm);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.2rem;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .article-header {
+            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-title {
+            font-size: 1.6rem;
+            color: var(--accent-warm);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .article-content h3 {
+            color: var(--accent-warm);
+            font-size: 1.25rem;
+            margin: 1.8rem 0 0.8rem;
+            border-right: 4px solid var(--accent-amber);
+            padding-right: 10px;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem;
+            color: #e2e8f0;
+            text-align: justify;
+        }
+
+        .example-box {
+            background: #0f172a;
+            border: 1px dashed var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .example-box h4 {
+            color: var(--accent-warm);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-quote {
+            background: rgba(245, 158, 11, 0.1);
+            border-right: 4px solid var(--accent-warm);
+            padding: 1rem;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .external-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-amber);
+            color: #000;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.88rem;
+            margin: 0.5rem 0 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .external-link-btn:hover {
+            opacity: 0.9;
+        }
+
+        .yt-btn {
+            background: var(--btn-red);
+            color: #fff;
+        }
+
+        .author-box {
+            margin-top: 2.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-info h4 {
+            color: var(--accent-warm);
+            font-size: 1rem;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .article-card { padding: 1.2rem; }
+            .article-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> بازگشت به صفحه اصلی</a>
+            <span style="color: var(--accent-warm); font-weight: bold; font-size: 0.9rem;">مستر املاکی</span>
+        </div>
+    </header>
+
+    <div class="article-container">
+        <article class="article-card">
+            
+            <header class="article-header">
+                <h1 class="article-title">شاخص P/R یا «دماسنج بازار مسکن» چیست و چگونه تب بازار املاک را بگیریم؟</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-user"></i> به قلم: امیر قیصری</span>
+                    <span><i class="far fa-clock"></i> زمان مطالعه: ۵ دقیقه</span>
+                    <span><i class="far fa-newspaper"></i> فعال رسانه‌ای و منتور بازار مسکن</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                
+                <p>در جریان لایو زنده دیشب در کانال یوتیوب، دوست عزیزمان <strong>hermeedas</strong> سوال بسیار کلیدی و مهمی درباره نحوه تشخیص ارزشمندی خرید ملک در شرایط فعلی مطرح کردند. پاسخ به این سوال دقیقاً به مفهومی گره خورده است که در ادبیات اقتصادی از آن به عنوان <strong>شاخص P/R (Price to Rent)</strong> یا «دماسنج بازار مسکن» یاد می‌شود.</p>
+
+                <div class="highlight-quote">
+                    "اگر می‌خواهید بدانید بازار مسکن در فاز حباب قرار دارد، آماده جهش است یا زمان مناسبی برای خریداران خانه‌اولی محسوب می‌شود، تنها کاتالوگ‌های مشاورین املاک را نگاه نکنید؛ دماسنج P/R را چک کنید!"
+                </div>
+
+                <a href="https://www.youtube.com/live/QHSApi1gzQY?is=bu-BnNePnUaZd3Hi" target="_blank" class="external-link-btn yt-btn">
+                    <i class="fab fa-youtube"></i> مشاهده بازپخش لایو دیشب و پاسخ به سوالات در یوتیوب
+                </a>
+
+                <h3>شاخص P/R به زبان ساده</h3>
+                <p>این شاخص از تقسیم <strong>قیمت کل ملک (Price)</strong> بر <strong>اجاره‌بهای سالانه آن (Annual Rent)</strong> به دست می‌آید. عدد حاصل به شما نشان می‌دهد که با اجاره دادن آن ملک، چند سال طول می‌کشد تا اصل سرمایه اولیه شما بازگردد.</p>
+
+                <div class="example-box">
+                    <h4>📊 مثال عملی و محاسباتی:</h4>
+                    <p>فرض کنید ملکی با مشخصات زیر در اختیار داريم:</p>
+                    <ul>
+                        <li><strong>قیمت خرید ملک:</strong> ۱ میلیارد تومان (۱,۰۰۰,۰۰۰,۰۰۰ تومان)</li>
+                        <li><strong>اجاره ماهیانه:</strong> ۴ میلیون تومان</li>
+                    </ul>
+                    <hr style="border-color: #334155; margin: 10px 0;">
+                    <p><strong>مراحل محاسبه:</strong></p>
+                    <p>۱. محاسبه اجاره سالانه: ۴ میلیون × ۱۲ ماه = <strong>۴۸ میلیون تومان</strong></p>
+                    <p>۲. تقسیم قیمت کل بر اجاره سالانه: ۱,۰۰۰,۰۰۰,۰۰۰ ÷ ۴۸,۰۰۰,۰۰۰ = <strong>۲۰.۸</strong></p>
+                    <p>بنابراین شاخص P/R این ملک حدود <strong>۲۱</strong> است.</p>
+                </div>
+
+                <h3>تحلیل عدد P/R در بازار ایران چه معنایی دارد؟</h3>
+                <p>به طور سنتی و بر اساس معیارهای بازار املاک در ایران:</p>
+                <ul>
+                    <li><strong>P/R زیر ۱۵ تا ۱۸:</strong> بازار در رکود قیمت خرید قرار دارد، اجاره‌بها نسبت به قیمت ملک بالا است و این شرایط بهترین زمان برای <strong>خریداران ملک</strong> به شمار می‌رود.</li>
+                    <li><strong>P/R بین ۱۸ تا ۲۵:</strong> بازار در حالت تعادل نسبی قرار دارد.</li>
+                    <li><strong>P/R بالای ۲۵ تا ۳۰:</strong> نشان‌دهنده حباب قیمت مسکن یا عقب ماندن شدید اجاره‌بها از تورم ملک است. در این حالت، خرید ملک صرفه اقتصادی کوتاه‌مدت کمتری دارد و معمولاً بازار آماده رکود سنگین یا رشد اجاره‌بها می‌شود.</li>
+                </ul>
+
+                <h3>نگاهی به خبر روز: طرح ۱۰ هزار مسکن استیجاری دولتی</h3>
+                <p>در همین راستا و برای کنترل همین دماسنج بازار، اخیرأ خبرگزاری تسنیم در گزارشی به بررسی <strong>عرضه ۱۰ هزار مسکن استیجاری برای بازار میلیونی مستأجران</strong> پرداخته و سهم کلانشهرهایی مانند تهران را تحلیل کرده است.</p>
+
+                <p>ورود دولت به عرضه مسکن استیجاری مستقیماً روی مخرج کسر شاخص P/R یعنی «میزان اجاره‌بها» تاثیر می‌گذارد. اگر این طرح‌ها به طور موثر اجرا شوند، با کنترل نرخ اجاره می‌توانند از نوسانات هیجانی شاخص P/R جلوگیری کرده و به ثبات نسبی بازار کمک کنند.</p>
+
+                <a href="https://www.tasnimnews.ir/fa/news/1405/05/25/3671962/10%D9%87%D8%B2%D8%A7%D8%B1-%D9%85%D8%B3%DA%A9%D9%86-%D8%A7%D8%B3%D8%AA%DB%8C%D8%AC%D8%A7%D8%B1%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86%DB%8C-%D9%85%D8%B3%D8%AA%D8%A3%D8%AC%D8%B1%D8%A7%D9%86-%D8%B3%D9%87%D9%85-%D8%AA%D9%87%D8%B1%D8%A7%D9%86-%DA%86%D9%82%D8%AF%D8%B1-%D8%A7%D8%B3%D8%AA" target="_blank" class="external-link-btn">
+                    <i class="fas fa-newspaper"></i> مطالعه متن کامل گزارش خبرگزاری تسنیم درباره مسکن استیجاری
+                </a>
+
+                <h3>جمع‌بندی و توصیه به سرمایه‌گذاران</h3>
+                <p>همان‌طور که در لایو هم تاکید شد، بدون محاسبه P/R وارد هیچ معامله ملکی نشوید. این فرمول ساده به شما قدرت تحلیل می‌دهد تا متوجه شوید آیا ملکی که قصد خرید آن را دارید ارزنده است یا فروشنده قیمتی حباب‌گونه را پیشنهاد داده است.</p>
+
+            </div>
+
+            <div class="author-box">
+                <div class="author-info">
+                    <h4>تحلیل و تنظیم: امیر قیصری (مستر املاکی)</h4>
+                    <p>کارشناس مدیریت صنعتی، فعال رسانه‌ای بازار مسکن، منتور و مدرس مهارت‌های تخصصی املاک.</p>
+                </div>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>تمامی حقوق متعلق به <strong>وب‌سایت رسمی مستر املاکی (امیر قیصری)</strong> می‌باشد © ۱۴۰۵</p>
+    </footer>
+
+</body>
+</html>

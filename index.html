@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مستر املاکی | امیر قیصری - آموزش و تحلیل بازار مسکن</title>
+    <title>مستر املاکی | امیر قیصری</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="سایت رسمی مستر املاکی (امیر قیصری). آموزش تخصصی مشاورین املاک و تحلیل روز بازار مسکن.">
+    <!-- SEO & Meta -->
+    <meta name="description" content="وب‌سایت رسمی امیر قیصری (مستر املاکی) - تحلیل بازار املاک، آموزش مشاورین مسکن و بررسی جدیدترین اخبار اقتصاد مسکن.">
     <meta name="author" content="امیر قیصری">
     
-    <!-- Open Graph (برای پیش‌نمایش در تلگرام و شبکه‌های اجتماعی) -->
-    <meta property="og:title" content="مستر املاکی | امیر قیصری">
-    <meta property="og:image" content="https://mramlaki.ir/og-image.jpg">
-
-    <!-- FontAwesome CDN -->
+    <!-- FontAwesome & Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         :root {
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
             --accent-warm: #f59e0b;
             --accent-amber: #d97706;
-            --btn-red: #dc2626;
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
-            --radius: 14px;
+            --radius: 16px;
         }
 
         * {
@@ -42,11 +37,12 @@
             direction: rtl;
         }
 
-        /* Header Navigation */
+        /* هدر چسبان */
         header {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(8px);
-            padding: 0.8rem 1.5rem;
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -61,111 +57,112 @@
             align-items: center;
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-area h1 {
+        .logo-title {
+            color: var(--accent-warm);
             font-size: 1.3rem;
-            color: var(--accent-warm);
             font-weight: bold;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 0.88rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-warm);
-        }
-
-        /* Hero Banner */
-        .hero-banner {
-            max-width: 1100px;
-            margin: 1.5rem auto 0;
-            padding: 0 1rem;
-        }
-
-        .banner-img-container {
-            width: 100%;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-
-        .banner-img-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .hero-intro {
-            text-align: center;
-            padding: 1.5rem 1rem;
-        }
-
-        .hero-intro h2 { font-size: 1.6rem; margin-bottom: 0.5rem; }
-        .hero-intro h2 span { color: var(--accent-warm); }
-        .hero-intro p { color: var(--text-muted); font-size: 0.95rem; max-width: 700px; margin: 0 auto 1.2rem; }
-
-        /* Social Action Buttons */
-        .social-buttons {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn-action {
-            padding: 8px 18px;
-            border-radius: 25px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-flex;
             align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
+            gap: 10px;
         }
 
-        .btn-action:hover { transform: translateY(-2px); }
-        .youtube { background-color: var(--btn-red); }
-        .aparat { background-color: #ed145b; }
-        .telegram { background-color: #0088cc; }
-        .bale { background-color: #10b981; }
-
-        /* Container & Grid Layout */
         .container {
             max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
 
+        /* بنر شیشه‌ای اصلی */
+        .hero-banner-glass {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('og-image.jpg') center/cover no-repeat;
+            border-radius: var(--radius);
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+        }
+
+        .glass-overlay {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            max-width: 780px;
+            width: 100%;
+        }
+
+        .glass-overlay h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+        }
+
+        .glass-overlay .highlight {
+            color: var(--accent-warm);
+        }
+
+        .glass-overlay p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .social-buttons-grid {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-social {
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-social.yt { background: #dc2626; }
+        .btn-social.ap { background: #ed145b; }
+        .btn-social.tg { background: #0088cc; }
+        .btn-social.bl { background: #10b981; }
+
+        .btn-social:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* تیتر بخش‌ها */
         .section-title {
+            color: var(--accent-warm);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid var(--accent-amber);
+            padding-right: 12px;
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 1.2rem;
-            color: var(--accent-warm);
-            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
-            padding-bottom: 0.4rem;
-            font-size: 1.1rem;
         }
 
+        /* گرید کارت‌ها */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3rem;
         }
 
         .card {
@@ -173,115 +170,158 @@
             border-radius: var(--radius);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Video Embed */
-        .video-box {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            background: #000;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border-color: rgba(245, 158, 11, 0.3);
         }
 
-        .video-box iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .card-img {
             width: 100%;
-            height: 100%;
-            border: 0;
+            height: 180px;
+            object-fit: cover;
         }
 
-        .yt-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2.5rem 1rem;
-            text-align: center;
-            background: #111827;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        .card-body {
+            padding: 1.5rem;
         }
 
-        .card-body { padding: 1.2rem; }
-        .card-body h4 { font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff; }
-        .card-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .card-body h4 {
+            color: var(--accent-warm);
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
 
         .btn-read-more {
             color: var(--accent-warm);
             text-decoration: none;
-            font-size: 0.88rem;
             font-weight: bold;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            transition: color 0.2s;
+            gap: 6px;
         }
 
-        .btn-read-more:hover {
-            color: #fff;
-        }
-
-        /* Bio Profile */
-        .profile-card {
-            background: var(--bg-card);
-            border: 1px solid var(--accent-amber);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .profile-card h3 { color: var(--accent-warm); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .profile-card p { color: #cbd5e1; font-size: 0.9rem; }
-
-        /* Form */
-        .form-card {
+        /* بخش درباره من با پرتره */
+        .about-section {
             background: var(--bg-card);
             border-radius: var(--radius);
-            padding: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        .form-group { margin-bottom: 1rem; }
-        .form-group label { display: block; margin-bottom: 0.3rem; font-size: 0.85rem; color: var(--accent-warm); }
-        .form-group input, .form-group textarea {
+        .about-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-amber);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        .about-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .about-content h3 {
+            color: var(--accent-warm);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-content h5 {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .about-content p {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+
+        /* فرم پیام */
+        .contact-box {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .form-control {
             width: 100%;
-            padding: 10px;
-            background: #0f172a;
+            padding: 12px;
+            border-radius: 8px;
             border: 1px solid #334155;
-            border-radius: 6px;
+            background: #0f172a;
             color: #fff;
-            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-amber);
         }
 
         .btn-submit {
+            width: 100%;
             background: var(--accent-amber);
             color: #000;
+            padding: 12px;
             border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            width: 100%;
-            font-size: 0.95rem;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 1rem;
             cursor: pointer;
+            transition: opacity 0.2s;
         }
+
+        .btn-submit:hover { opacity: 0.9; }
 
         footer {
             text-align: center;
-            padding: 1.2rem;
-            background: #090d16;
+            padding: 2rem 1rem;
             color: var(--text-muted);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        @media (max-width: 600px) {
-            .nav-container { flex-direction: column; gap: 8px; }
-            .hero-intro h2 { font-size: 1.3rem; }
+        @media (max-width: 768px) {
+            .about-section { text-align: center; justify-content: center; }
+            .hero-banner-glass { padding: 1.5rem 0.8rem; }
+            .glass-overlay { padding: 1.5rem 1rem; }
+            .glass-overlay h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -289,147 +329,99 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo-area">
-                <i class="fas fa-building" style="color: var(--accent-warm); font-size: 1.3rem;"></i>
-                <h1>مستر املاکی</h1>
+            <div class="logo-title">
+                <i class="fas fa-building"></i> مستر املاکی
             </div>
-            <nav class="nav-links">
-                <a href="#videos">ویدیوها</a>
-                <a href="#articles">مقالات</a>
-                <a href="#about">درباره من</a>
-                <a href="#contact">ارتباط</a>
-            </nav>
+            <span style="color: var(--text-muted); font-size: 0.85rem;">امیر قیصری</span>
         </div>
     </header>
 
-    <!-- بنر اصلی -->
-    <div class="hero-banner">
-        <div class="banner-img-container">
-            <img src="og-image.jpg" alt="بنر رسمی مستر املاکی">
-        </div>
-        
-        <div class="hero-intro">
-            <h2>به وب‌سایت رسمی <span>مستر املاکی</span> خوش آمدید</h2>
-            <p>آموزش تخصصی مشاورین املاک و تحلیل بازار مسکن توسط امیر قیصری</p>
-            
-            <div class="social-buttons">
-                <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube"><i class="fab fa-youtube"></i> یوتیوب</a>
-                <a href="https://www.aparat.com/mramlaki" target="_blank" class="btn-action aparat"><i class="fas fa-video"></i> آپارات</a>
-                <a href="https://t.me/+hrZP7cNcvPtkM2M0" target="_blank" class="btn-action telegram"><i class="fab fa-telegram"></i> تلگرام</a>
-                <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="btn-action bale"><i class="fas fa-comments"></i> بله</a>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
 
-        <!-- بخش ویدیوها -->
-        <section id="videos">
-            <div class="section-title">
-                <i class="fas fa-play-circle"></i>
-                <h3>آخرین ویدیوها و دوره‌های آموزشی</h3>
-            </div>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="video-box">
-                        <iframe src="https://www.aparat.com/video/video/embed/videohash/v238118/vt/frame" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h4>دوره آموزشی و تحلیل‌های آپارات</h4>
-                        <p>مشاهده مستقیم ویدیوها و ولاگ‌های آموزشی بدون نیاز به فیلترشکن.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="yt-box">
-                        <i class="fab fa-youtube fa-3x" style="color: #ff0000; margin-bottom: 12px;"></i>
-                        <h4 style="margin-bottom: 12px; font-size: 1.1rem;">کانال رسمی یوتیوب</h4>
-                        <a href="https://www.youtube.com/amirgheysari" target="_blank" class="btn-action youtube">
-                            ورود به کانال یوتیوب
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h4>تحلیل‌های اقتصادی و لایوها</h4>
-                        <p>برای دسترسی به تمام ویدیوها و تحلیل‌های هفتگی کانال را دنبال کنید.</p>
-                    </div>
+        <!-- بنر اصلی شیشه‌ای -->
+        <div class="hero-banner-glass">
+            <div class="glass-overlay">
+                <h2>به وب‌سایت رسمی <span class="highlight">مستر املاکی</span> خوش آمدید</h2>
+                <p>آموزش تخصصی مشاورین املاک و تحلیل تخصصی بازار مسکن توسط امیر قیصری</p>
+                
+                <div class="social-buttons-grid">
+                    <a href="https://www.youtube.com/@amirgheysari" target="_blank" class="btn-social yt"><i class="fab fa-youtube"></i> یوتیوب</a>
+                    <a href="https://www.aparat.com/mramlaki" target="_blank" class="btn-social ap"><i class="fas fa-video"></i> آپارات</a>
+                    <a href="https://t.me/+hrZP7cNcvPtkM2M0" target="_blank" class="btn-social tg"><i class="fab fa-telegram"></i> تلگرام</a>
+                    <a href="https://ble.ir/join/4VeGpRCnYu" target="_blank" class="btn-social bl"><i class="fas fa-comments"></i> بله</a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- بخش مقالات و تحلیل‌ها -->
-        <<section id="articles">
-    <div class="section-title">
-        <i class="fas fa-newspaper"></i>
-        <h3>مقالات و تحلیل‌ها</h3>
-    </div>
-    <div class="grid">
-        <!-- کارت مقاله اول -->
-        <article class="card">
-            <div class="card-body">
-                <h4>خرید و فروش خانه‌های سانتی‌متری</h4>
-                <p>تحلیل ابهامات حقوقی، قدرالسهم پارکینگ و هزینه‌های شارژ در طرح‌های فروش خرد مسکن.</p>
-                <a href="cm-housing.html" class="btn-read-more">مطالعه مقاله ←</a>
-            </div>
-        </article>
+        <section id="articles">
+            <h3 class="section-title"><i class="fas fa-newspaper"></i> مقالات و تحلیل‌های تخصصی</h3>
+            <div class="grid">
+                
+                <!-- مقاله اول -->
+                <article class="card">
+                    <img src="cm-thumb.jpg" alt="خانه‌های سانتی‌متری" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>خرید و فروش خانه‌های سانتی‌متری</h4>
+                        <p>تحلیل ابهامات حقوقی، قدرالسهم پارکینگ و هزینه‌های شارژ در طرح‌های فروش خرد مسکن.</p>
+                        <a href="cm-housing.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-        <!-- کارت مقاله دوم -->
-        <article class="card">
-            <div class="card-body">
-                <h4>شاخص P/R؛ دماسنج بازار مسکن</h4>
-                <p>آموزش ساده محاسبه نسبت قیمت به اجاره و تحلیل طرح مسکن استیجاری دولتی.</p>
-                <a href="pr-ratio.html" class="btn-read-more">مطالعه مقاله ←</a>
-            </div>
-        </article>
-    </div>
-</section>
+                <!-- مقاله دوم -->
+                <article class="card">
+                    <img src="pr-thumb.jpg" alt="شاخص P/R" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>شاخص P/R؛ دماسنج هوشمند بازار مسکن</h4>
+                        <p>آموزش ساده محاسبه نسبت قیمت به اجاره با مثال ملک ۱ میلیاردی و تحلیل طرح مسکن استیجاری.</p>
+                        <a href="pr-ratio.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-    
-        <!-- درباره من -->
-        <section id="about" class="profile-card">
-            <h3>امیر قیصری | مستر املاکی</h3>
-            <p>کارشناس مدیریت صنعتی، بروکر و منتور املاک. ارائه تحلیل‌های اقتصادی دقیق و آموزش‌های کاربردی برای مشاورین املاک.</p>
+            </div>
         </section>
 
-        <!-- فرم ارتباط -->
-        <section id="contact" class="form-card">
-            <div class="section-title" style="justify-content: center; border: none;">
-                <h3>📩 ارسال پیام مستقیم</h3>
+        <!-- بخش درباره من -->
+        <section id="about">
+            <div class="about-section">
+                <img src="amir-profile.jpg" alt="امیر قیصری - مستر املاکی" class="about-img">
+                <div class="about-content">
+                    <h3>امیر قیصری | مستر املاکی</h3>
+                    <h5>کارشناس مدیریت، مدرس و منتور بازار املاک</h5>
+                    <p>
+                        ارائه تحلیل‌های دقیق اقتصادی بازار مسکن، آموزش تکنیک‌های کاربردی و کلیدی برای مشاورین املاک، و بررسی تخصصی طرح‌های نوین سرمایه‌گذاری ملکی در ایران.
+                    </p>
+                </div>
             </div>
-            <form onsubmit="sendToTelegram(event)">
-                <div class="form-group">
-                    <label>نام و نام خانوادگی:</label>
-                    <input type="text" id="formName" required placeholder="مثال: علی محمدی">
-                </div>
-                <div class="form-group">
-                    <label>شماره تماس:</label>
-                    <input type="tel" id="formPhone" required placeholder="۰۹۱۲XXXXXXX">
-                </div>
-                <div class="form-group">
-                    <label>متن پیام یا مشخصات ملک:</label>
-                    <textarea id="formMessage" rows="3" placeholder="توضیحات خود را بنویسید..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">ارسال پیام به تلگرام</button>
-            </form>
+        </section>
+
+        <!-- بخش فرم تماس -->
+        <section id="contact">
+            <div class="contact-box">
+                <h3 class="section-title" style="border:none; padding:0; margin-bottom:1rem;"><i class="fas fa-paper-plane"></i> ارسال پیام مستقیم</h3>
+                <form action="https://t.me/amirgheysari" method="get" target="_blank">
+                    <div class="form-group">
+                        <label>نام و نام خانوادگی:</label>
+                        <input type="text" class="form-control" placeholder="مثال: علی محمدی" required>
+                    </div>
+                    <div class="form-group">
+                        <label>شماره تماس:</label>
+                        <input type="tel" class="form-control" placeholder="09123456789" required>
+                    </div>
+                    <div class="form-group">
+                        <label>متن پیام یا درخواست مشاوره:</label>
+                        <textarea class="form-control" rows="4" placeholder="پیام خود را بنویسید..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">ارسال پیام در تلگرام</button>
+                </form>
+            </div>
         </section>
 
     </div>
 
     <footer>
-        <p>تمامی حقوق متعلق به <strong>امیر قیصری (مستر املاکی)</strong> می‌باشد © ۱۴۰۵</p>
+        <p>تمامی حقوق متعلق به <strong>وب‌سایت رسمی مستر املاکی (امیر قیصری)</strong> می‌باشد © ۱۴۰۵</p>
     </footer>
 
-    <script>
-        function sendToTelegram(event) {
-            event.preventDefault();
-            const name = document.getElementById('formName').value;
-            const phone = document.getElementById('formPhone').value;
-            const msg = document.getElementById('formMessage').value;
-            
-            const text = `پیام جدید از mramlaki.ir:%0A👤 نام: ${encodeURIComponent(name)}%0A📞 تماس: ${encodeURIComponent(phone)}%0A📝 متن: ${encodeURIComponent(msg)}`;
-            
-            window.open(`https://t.me/+hrZP7cNcvPtkM2M0?text=${text}`, '_blank');
-        }
-    </script>
 </body>
 </html>

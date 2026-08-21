@@ -1,23 +1,33 @@
-sitemap.xml<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- صفحه اصلی -->
   <url>
     <loc>https://mramlaki.ir/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- مقاله مسکن سانتی‌متری -->
+
+  <!-- مقاله ۱: خرید و فروش خانه‌های سانتی‌متری -->
   <url>
     <loc>https://mramlaki.ir/cm-housing.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- مقاله شاخص P/R -->
+
+  <!-- مقاله ۲: شاخص P/R دما سنج بازار مسکن -->
   <url>
     <loc>https://mramlaki.ir/pr-ratio.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- مقاله ۳: راهنمای جامع وام بانک مسکن -->
+  <url>
+    <loc>https://mramlaki.ir/housing-loan-guide.html</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

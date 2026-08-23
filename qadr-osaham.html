@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین؛ راهنمای کامل | مستر املاکی</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="روش‌های محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین در قرارداد مشارکت در ساخت، عوامل موثر بر آن و نکات حقوقی مهم، به قلم امیر قیصری.">
+    <meta name="author" content="امیر قیصری">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین؛ راهنمای کامل">
+    <meta property="og:description" content="روش‌های محاسبه قدرالسهم زمین در مشارکت در ساخت و نکات حقوقی مهم آن، توسط امیر قیصری (مستر املاکی).">
+    <meta property="og:image" content="https://mramlaki.ir/og-image.jpg">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-warm: #f59e0b;
+            --accent-amber: #d97706;
+            --btn-red: #dc2626;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.9;
+            direction: rtl;
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 0.8rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-amber);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-area span {
+            font-size: 1.2rem;
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-warm);
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.2rem;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .article-title {
+            font-size: 1.8rem;
+            color: var(--accent-warm);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .article-content h2 {
+            font-size: 1.3rem;
+            color: var(--accent-warm);
+            margin: 1.8rem 0 0.8rem;
+            border-right: 4px solid var(--accent-amber);
+            padding-right: 10px;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e1;
+            text-align: justify;
+        }
+
+        .article-content ul {
+            margin: 1rem 1.8rem 1.5rem;
+            color: #cbd5e1;
+        }
+
+        .article-content li {
+            margin-bottom: 0.6rem;
+        }
+
+        .callout-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .callout-box h3 {
+            color: var(--accent-warm);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .source-link, .live-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-warm);
+            text-decoration: underline;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .source-link:hover {
+            color: #fff;
+        }
+
+        .live-card {
+            background: #111827;
+            border: 1px solid var(--btn-red);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .live-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .btn-youtube-live {
+            background-color: var(--btn-red);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+
+        .btn-youtube-live:hover {
+            transform: translateY(-2px);
+        }
+
+        .author-box {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .author-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-warm);
+            font-size: 1.8rem;
+            color: var(--accent-warm);
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            color: var(--accent-warm);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.2rem;
+            background: #090d16;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .article-title { font-size: 1.4rem; }
+            .article-content { padding: 1.2rem; }
+            .author-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <i class="fas fa-building" style="color: var(--accent-warm); font-size: 1.3rem;"></i>
+                <span>مستر املاکی</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">صفحه اصلی</a>
+                <a href="index.html#articles">مقالات</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-container">
+
+        <header class="article-header">
+            <h1 class="article-title">محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین؛ راهنمای کامل برای مالکان و سازندگان</h1>
+            <div class="article-meta">
+                <span><i class="fas fa-user"></i> نویسنده: امیر قیصری</span>
+                <span><i class="fas fa-tag"></i> راهنمای حقوقی و مالی مسکن</span>
+                <span><i class="fas fa-clock"></i> زمان مطالعه: ۶ دقیقه</span>
+            </div>
+        </header>
+
+        <article class="article-content">
+
+            <img src="qadr-cover.jpg" alt="محاسبه قدرالسهم ساختمان قدیمی‌ساز از زمین در مشارکت در ساخت" class="article-image" onerror="this.src='og-image.jpg'">
+
+            <p>
+                اگر صاحب یک خانه کلنگی یا آپارتمان قدیمی‌ساز هستید و به فکر مشارکت در ساخت افتاده‌اید، احتمالاً اولین سوالی که ذهن‌تان را درگیر کرده این است: «از متراژ نهایی ساختمان جدید، چند درصد سهم من است؟» پاسخ این سوال یک عدد ثابت نیست، بلکه حاصل محاسبه‌ای به نام قدرالسهم زمین است؛ محاسبه‌ای که اگر درست انجام نشود، ممکن است سال‌ها بعد به دعوای حقوقی بین مالک و سازنده تبدیل شود.
+            </p>
+
+            <h2>قدرالسهم چیست؟</h2>
+            <p>
+                قدرالسهم در واقع همان سهمی است که مالک زمین از کل ساختمان ساخته‌شده دریافت می‌کند، در ازای واگذاری حق ساخت زمینش به سازنده. در قراردادهای مشارکت در ساخت، به‌جای پول نقد، مالک بخشی از واحدهای آپارتمانی نوساز را دریافت می‌کند و سازنده هم بابت هزینه‌ای که برای ساخت متحمل شده، بخش دیگر را برمی‌دارد. نسبت این تقسیم همان قدرالسهم است.
+            </p>
+
+            <h2>چرا محاسبه در ساختمان‌های قدیمی‌ساز پیچیده‌تر است؟</h2>
+            <p>
+                در زمین‌های خالی، محاسبه نسبتاً ساده است؛ فقط ارزش زمین و هزینه ساخت را مقایسه می‌کنید. اما وقتی صحبت از یک بنای قدیمی‌ساز است، چند لایه دیگر هم وارد معادله می‌شود:
+            </p>
+            <ul>
+                <li><strong>فرسودگی بنای موجود:</strong> ساختمان کهنه معمولاً ارزش افزوده‌ای ندارد و گاهی حتی هزینه تخریب هم باید کسر شود.</li>
+                <li><strong>تراکم مجاز جدید:</strong> اگر پروانه ساخت با تراکم بیشتری نسبت به بنای قدیمی صادر شود، متراژ قابل ساخت و در نتیجه ارزش نهایی بالاتر می‌رود.</li>
+                <li><strong>عرض گذر و کاربری:</strong> زمین‌های نوساز، به‌خصوص در بافت‌های فرسوده، ممکن است مشمول تشویق‌های شهرداری مثل تراکم رایگان یا تخفیف عوارض شوند.</li>
+                <li><strong>زمان تحویل:</strong> هرچه ساخت طولانی‌تر شود، ریسک نوسان قیمت مصالح و بازار مسکن هم باید در قرارداد لحاظ شود.</li>
+            </ul>
+
+            <h2>روش‌های رایج محاسبه قدرالسهم</h2>
+            <p>
+                ساده‌ترین و رایج‌ترین روش، مقایسه ارزش زمین با هزینه تمام‌شده ساخت است:
+            </p>
+
+            <div class="callout-box">
+                <h3><i class="fas fa-calculator"></i> فرمول پایه محاسبه سهم مالک</h3>
+                <p>
+                    سهم مالک = ارزش روز زمین ÷ (ارزش روز زمین + هزینه تمام‌شده ساخت)
+                </p>
+            </div>
+
+            <p>
+                روش دیگر، تبدیل بر مبنای متراژ مفید است؛ یعنی مشخص می‌شود مالک به ازای هر متر زمین چند متر زیربنای مفید دریافت می‌کند. این روش وقتی تراکم مجاز منطقه ثابت و مشخص باشد، شفاف‌تر و قابل استنادتر است. در بیشتر قراردادهای معتبر، ارزش زمین و برآورد هزینه ساخت را یک یا چند کارشناس رسمی دادگستری تعیین می‌کنند، نه توافق شفاهی طرفین؛ همین کار از اختلافات بعدی جلوگیری می‌کند.
+            </p>
+
+            <h2>عوامل تعیین‌کننده در درصد قدرالسهم</h2>
+            <ul>
+                <li>موقعیت جغرافیایی و ارزش منطقه‌ای زمین</li>
+                <li>عرض گذر (معابر عریض‌تر معمولاً تراکم و ارزش بیشتری دارند)</li>
+                <li>تراکم مجاز و امکان استفاده از تشویق‌های نوسازی بافت فرسوده</li>
+                <li>عمر و وضعیت فنی بنای موجود</li>
+                <li>شرایط بازار مسکن در زمان انعقاد قرارداد و زمان تحویل</li>
+                <li>اعتبار و سابقه کاری سازنده</li>
+            </ul>
+
+            <h2>یک مثال عددی ساده</h2>
+            <div class="callout-box">
+                <h3><i class="fas fa-home"></i> مثال محاسبه</h3>
+                <p>
+                    زمینی ۲۰۰ متری با تراکم مجاز ۲۴۰ درصد؛ یعنی تا ۴۸۰ متر زیربنا قابل ساخت است. اگر ارزش روز زمین ۱۲ میلیارد تومان و هزینه تمام‌شده ساخت (با احتساب سود سازنده) حدود ۸ میلیارد تومان باشد، سهم مالک برابر است با ۱۲ ÷ (۱۲ + ۸) = ۶۰ درصد. یعنی از ۴۸۰ متر زیربنا، حدود ۲۸۸ متر سهم مالک و ۱۹۲ متر سهم سازنده خواهد بود. این عدد صرفاً یک مثال ساده‌شده است و در عمل باید توسط کارشناس رسمی تایید شود.
+                </p>
+            </div>
+
+            <h2>تحلیل ویدئویی و بررسی تفصیلی در لایو مستر املاکی</h2>
+            <p>
+                برای بررسی کامل روش‌های محاسبه قدرالسهم زمین در ساختمان‌های قدیمی‌ساز و پاسخ به سوالات بینندگان، این موضوع را در یکی از برنامه‌های زنده کانال بررسی کرده‌ایم:
+            </p>
+
+            <div class="live-card">
+                <h3><i class="fab fa-youtube" style="color: var(--btn-red);"></i> تحلیل کامل لایو قدرالسهم ساختمان‌های قدیمی‌ساز</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem;">قدرالسهم زمین چطور محاسبه می‌شود؟ بررسی تخصصی در یوتیوب مستر املاکی</p>
+                <a href="https://www.youtube.com/live/pZ7v9gFkm3o?si=PNfob95Xfejn_-Ns" target="_blank" class="btn-youtube-live">
+                    <i class="fab fa-youtube"></i> مشاهده لایو در یوتیوب
+                </a>
+            </div>
+
+            <h2>نکات حقوقی مهم پیش از امضای قرارداد مشارکت در ساخت</h2>
+            <ul>
+                <li>درصد یا متراژ قدرالسهم را به‌صورت دقیق و عددی در قرارداد قید کنید، نه به‌صورت کلی.</li>
+                <li>زمان‌بندی تحویل، جریمه تاخیر و نحوه تقسیم واحدها (قرعه‌کشی یا توافقی) را مشخص کنید.</li>
+                <li>پیش از امضا، وضعیت مجوزها و پروانه ساخت را استعلام بگیرید.</li>
+                <li>حتماً از کارشناس رسمی دادگستری برای ارزش‌گذاری زمین و برآورد هزینه ساخت کمک بگیرید.</li>
+                <li>قرارداد را با مشاوره یک وکیل متخصص ملکی تنظیم یا بازبینی کنید.</li>
+            </ul>
+
+            <h2>جمع‌بندی</h2>
+            <p>
+                محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین، ترکیبی از ارزش‌گذاری دقیق زمین، برآورد واقع‌بینانه هزینه ساخت و شناخت مقررات شهرسازی منطقه است. عجله در این محاسبه یا اتکا به تخمین‌های شفاهی، می‌تواند به ضرر مالی مالک زمین تمام شود. بهترین راه، استفاده از کارشناس رسمی دادگستری و تنظیم قرارداد شفاف و مکتوب است تا هم مالک و هم سازنده، از ابتدای مسیر بدانند سهم‌شان دقیقاً چقدر خواهد بود.
+            </p>
+
+        </article>
+
+        <!-- معرفی نویسنده -->
+        <section class="author-box">
+            <div class="author-avatar">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="author-info">
+                <h4>امیر قیصری</h4>
+                <p>فعال رسانه‌ای بازار مسکن، بروکر و منتور املاک | تحلیل‌گر شاخص‌های اقتصادی و مسکن در مجموعه «مستر املاکی»</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>تمامی حقوق متعلق به <strong>امیر قیصری (مستر املاکی)</strong> می‌باشد © ۱۴۰۵</p>
+    </footer>
+
+</body>
+</html>

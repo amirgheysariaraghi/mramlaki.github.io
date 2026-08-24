@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابزارهای محاسباتی مسکن؛ شاخص P/R، وام مسکن و قدرالسهم زمین | مستر املاکی</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="دستیار محاسباتی رایگان مستر املاکی: محاسبه آنلاین شاخص P/R، اقساط وام مسکن و قدرالسهم زمین در مشارکت در ساخت.">
+    <meta name="author" content="امیر قیصری">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ابزارهای محاسباتی مسکن | مستر املاکی">
+    <meta property="og:description" content="محاسبه آنلاین شاخص P/R، اقساط وام مسکن و قدرالسهم زمین، ساخته امیر قیصری (مستر املاکی).">
+    <meta property="og:image" content="https://mramlaki.ir/og-image.jpg">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-warm: #f59e0b;
+            --accent-amber: #d97706;
+            --btn-red: #dc2626;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.9;
+            direction: rtl;
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 0.8rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-amber);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-area span {
+            font-size: 1.2rem;
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-right: 12px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-warm);
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.2rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .page-title {
+            font-size: 1.8rem;
+            color: var(--accent-warm);
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tool-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 1.8rem;
+        }
+
+        .tool-card h2 {
+            font-size: 1.2rem;
+            color: var(--accent-warm);
+            margin-bottom: 0.4rem;
+            border-right: 4px solid var(--accent-amber);
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0.6rem 0 1.3rem;
+        }
+
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .field label {
+            font-size: 0.82rem;
+            color: #cbd5e1;
+        }
+
+        .field input {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 10px 12px;
+            color: var(--text-light);
+            font-size: 0.92rem;
+            font-family: inherit;
+        }
+
+        .field input:focus {
+            outline: none;
+            border-color: var(--accent-warm);
+        }
+
+        .btn-calc {
+            background-color: var(--accent-amber);
+            color: #fff;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-calc:hover {
+            background-color: var(--accent-warm);
+            transform: translateY(-2px);
+        }
+
+        .result-box {
+            margin-top: 1.3rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.1rem 1.3rem;
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+        }
+
+        .result-box .result-main {
+            font-size: 1.15rem;
+            color: var(--accent-warm);
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+        }
+
+        .result-box .result-note {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        .related-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-warm);
+            text-decoration: underline;
+            font-size: 0.82rem;
+            margin-top: 1rem;
+        }
+
+        .related-link:hover {
+            color: #fff;
+        }
+
+        .author-box {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-amber);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .author-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-warm);
+            font-size: 1.8rem;
+            color: var(--accent-warm);
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            color: var(--accent-warm);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.2rem;
+            background: #090d16;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .page-title { font-size: 1.4rem; }
+            .tool-card { padding: 1.2rem; }
+            .field-row { grid-template-columns: 1fr; }
+            .author-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <i class="fas fa-building" style="color: var(--accent-warm); font-size: 1.3rem;"></i>
+                <span>مستر املاکی</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">صفحه اصلی</a>
+                <a href="index.html#articles">مقالات</a>
+                <a href="tools.html">ابزارها</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+
+        <header class="page-header">
+            <h1 class="page-title">ابزارهای محاسباتی مسکن</h1>
+            <p class="page-subtitle">سه دستیار محاسباتی رایگان از مستر املاکی؛ نتیجه رو مستقیم و آنی همین‌جا ببینید.</p>
+        </header>
+
+        <!-- ابزار ۱: شاخص P/R -->
+        <section class="tool-card">
+            <h2><i class="fas fa-thermometer-half"></i> محاسبه‌گر شاخص P/R</h2>
+            <p class="tool-desc">نسبت قیمت ملک به اجاره سالانه؛ دماسنج هوشمند بازار مسکن برای تصمیم خرید یا اجاره.</p>
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="pr-price">قیمت ملک (تومان)</label>
+                    <input type="number" id="pr-price" placeholder="مثلاً 5000000000">
+                </div>
+                <div class="field">
+                    <label for="pr-rent">اجاره ماهانه (تومان)</label>
+                    <input type="number" id="pr-rent" placeholder="مثلاً 15000000">
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="calcPR()"><i class="fas fa-calculator"></i> محاسبه شاخص P/R</button>
+
+            <div class="result-box" id="pr-result">
+                <div class="result-main" id="pr-result-main"></div>
+                <div class="result-note" id="pr-result-note"></div>
+            </div>
+
+            <br>
+            <a href="pr-ratio.html" class="related-link"><i class="fas fa-book-open"></i> مطالعه کامل مقاله شاخص P/R</a>
+        </section>
+
+        <!-- ابزار ۲: وام مسکن -->
+        <section class="tool-card">
+            <h2><i class="fas fa-landmark"></i> محاسبه‌گر قسط وام مسکن</h2>
+            <p class="tool-desc">مبلغ قسط ماهانه وام مسکن را بر اساس مبلغ وام، نرخ سود و مدت بازپرداخت محاسبه کنید.</p>
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="loan-amount">مبلغ وام (تومان)</label>
+                    <input type="number" id="loan-amount" placeholder="مثلاً 1250000000">
+                </div>
+                <div class="field">
+                    <label for="loan-rate">نرخ سود سالانه (درصد)</label>
+                    <input type="number" id="loan-rate" placeholder="مثلاً 18">
+                </div>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="loan-years">مدت بازپرداخت (سال)</label>
+                    <input type="number" id="loan-years" placeholder="مثلاً 12">
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="calcLoan()"><i class="fas fa-calculator"></i> محاسبه قسط ماهانه</button>
+
+            <div class="result-box" id="loan-result">
+                <div class="result-main" id="loan-result-main"></div>
+                <div class="result-note" id="loan-result-note"></div>
+            </div>
+
+            <br>
+            <a href="housing-loan-guide.html" class="related-link"><i class="fas fa-book-open"></i> مطالعه کامل راهنمای وام مسکن</a>
+        </section>
+
+        <!-- ابزار ۳: قدرالسهم زمین -->
+        <section class="tool-card">
+            <h2><i class="fas fa-home"></i> محاسبه‌گر قدرالسهم زمین</h2>
+            <p class="tool-desc">سهم تقریبی مالک از متراژ نهایی ساختمان در قرارداد مشارکت در ساخت را تخمین بزنید.</p>
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="qs-land-value">ارزش روز زمین (تومان)</label>
+                    <input type="number" id="qs-land-value" placeholder="مثلاً 12000000000">
+                </div>
+                <div class="field">
+                    <label for="qs-build-cost">هزینه تمام‌شده ساخت (تومان)</label>
+                    <input type="number" id="qs-build-cost" placeholder="مثلاً 8000000000">
+                </div>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="qs-total-area">متراژ کل زیربنای مجاز (اختیاری، متر مربع)</label>
+                    <input type="number" id="qs-total-area" placeholder="مثلاً 480">
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="calcQadrOsaham()"><i class="fas fa-calculator"></i> محاسبه قدرالسهم</button>
+
+            <div class="result-box" id="qs-result">
+                <div class="result-main" id="qs-result-main"></div>
+                <div class="result-note" id="qs-result-note"></div>
+            </div>
+
+            <br>
+            <a href="qadr-osaham.html" class="related-link"><i class="fas fa-book-open"></i> مطالعه کامل مقاله قدرالسهم زمین</a>
+        </section>
+
+        <section class="author-box">
+            <div class="author-avatar">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="author-info">
+                <h4>امیر قیصری</h4>
+                <p>فعال رسانه‌ای بازار مسکن، بروکر و منتور املاک | تحلیل‌گر شاخص‌های اقتصادی و مسکن در مجموعه «مستر املاکی»</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>تمامی حقوق متعلق به <strong>امیر قیصری (مستر املاکی)</strong> می‌باشد © ۱۴۰۵</p>
+        <p style="margin-top:6px; font-size:0.75rem; color:#64748b;">این ابزارها صرفاً برآورد تقریبی ارائه می‌دهند و جایگزین نظر کارشناس رسمی نیستند.</p>
+    </footer>
+
+    <script>
+        function formatToman(num) {
+            return Math.round(num).toLocaleString('en-US') + ' تومان';
+        }
+
+        function calcPR() {
+            const price = parseFloat(document.getElementById('pr-price').value);
+            const rent = parseFloat(document.getElementById('pr-rent').value);
+            const box = document.getElementById('pr-result');
+            const main = document.getElementById('pr-result-main');
+            const note = document.getElementById('pr-result-note');
+
+            if (!price || !rent || price <= 0 || rent <= 0) {
+                main.textContent = 'لطفاً قیمت ملک و اجاره ماهانه را به‌درستی وارد کنید.';
+                note.textContent = '';
+                box.classList.add('show');
+                return;
+            }
+
+            const annualRent = rent * 12;
+            const pr = price / annualRent;
+
+            let interpretation;
+            if (pr < 15) {
+                interpretation = 'نسبت پایین؛ خرید نسبت به اجاره از نظر بازدهی به‌صرفه‌تر به نظر می‌رسد.';
+            } else if (pr <= 25) {
+                interpretation = 'نسبت متوسط و نزدیک به میانگین بازار مسکن.';
+            } else {
+                interpretation = 'نسبت بالا؛ اجاره‌نشینی نسبت به خرید از نظر بازدهی نقدی به‌صرفه‌تر به نظر می‌رسد.';
+            }
+
+            main.textContent = 'شاخص P/R = ' + pr.toFixed(1);
+            note.textContent = interpretation + ' (این عدد صرفاً یک شاخص کمکی است، نه توصیه سرمایه‌گذاری.)';
+            box.classList.add('show');
+        }
+
+        function calcLoan() {
+            const amount = parseFloat(document.getElementById('loan-amount').value);
+            const rateAnnual = parseFloat(document.getElementById('loan-rate').value);
+            const years = parseFloat(document.getElementById('loan-years').value);
+            const box = document.getElementById('loan-result');
+            const main = document.getElementById('loan-result-main');
+            const note = document.getElementById('loan-result-note');
+
+            if (!amount || !rateAnnual || !years || amount <= 0 || rateAnnual <= 0 || years <= 0) {
+                main.textContent = 'لطفاً هر سه فیلد را به‌درستی وارد کنید.';
+                note.textContent = '';
+                box.classList.add('show');
+                return;
+            }
+
+            const r = (rateAnnual / 100) / 12;
+            const n = years * 12;
+            const installment = amount * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+            const totalPay = installment * n;
+
+            main.textContent = 'قسط ماهانه تقریبی: ' + formatToman(installment);
+            note.textContent = 'مجموع بازپرداخت در طول ' + years + ' سال: ' + formatToman(totalPay) + '. نرخ سود بانک‌ها و شرایط وام ممکن است متفاوت باشد؛ این عدد صرفاً تخمینی است.';
+            box.classList.add('show');
+        }
+
+        function calcQadrOsaham() {
+            const landValue = parseFloat(document.getElementById('qs-land-value').value);
+            const buildCost = parseFloat(document.getElementById('qs-build-cost').value);
+            const totalArea = parseFloat(document.getElementById('qs-total-area').value);
+            const box = document.getElementById('qs-result');
+            const main = document.getElementById('qs-result-main');
+            const note = document.getElementById('qs-result-note');
+
+            if (!landValue || !buildCost || landValue <= 0 || buildCost <= 0) {
+                main.textContent = 'لطفاً ارزش زمین و هزینه ساخت را به‌درستی وارد کنید.';
+                note.textContent = '';
+                box.classList.add('show');
+                return;
+            }
+
+            const ownerShare = landValue / (landValue + buildCost) * 100;
+            const builderShare = 100 - ownerShare;
+
+            main.textContent = 'سهم تقریبی مالک: ' + ownerShare.toFixed(1) + '٪  |  سهم سازنده: ' + builderShare.toFixed(1) + '٪';
+
+            if (totalArea && totalArea > 0) {
+                const ownerArea = totalArea * (ownerShare / 100);
+                note.textContent = 'از ' + totalArea + ' متر زیربنای کل، حدود ' + ownerArea.toFixed(1) + ' متر سهم مالک خواهد بود. این محاسبه تقریبی است و باید توسط کارشناس رسمی دادگستری تایید شود.';
+            } else {
+                note.textContent = 'این محاسبه تقریبی است و باید توسط کارشناس رسمی دادگستری تایید شود.';
+            }
+            box.classList.add('show');
+        }
+    </script>
+
+</body>
+</html>

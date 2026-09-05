@@ -80,8 +80,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .logo-title {
@@ -91,24 +89,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
-        }
-
-        nav.main-nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        nav.main-nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        nav.main-nav a:hover {
-            color: var(--accent-warm);
         }
 
         .container {
@@ -143,7 +123,7 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
-        .hero-text-box h2 {
+        .hero-text-box h1 {
             font-size: 2rem;
             margin-bottom: 0.8rem;
             color: #ffffff;
@@ -492,15 +472,14 @@
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo-title">
+            <div class="logo-title">
                 <i class="fas fa-building"></i> مستر املاکی
-            </a>
-            <nav class="main-nav">
-                <a href="index.html">خانه</a>
-                <a href="course.html">دوره طلایی مشاورین املاک</a>
-                <a href="#articles">مقالات</a>
-                <a href="#contact">ارتباط با ما</a>
-            </nav>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <a href="course.html" style="color: var(--accent-warm, #f59e0b); text-decoration: none; font-size: 0.9rem; font-weight: bold;"><i class="fas fa-graduation-cap"></i> دوره طلایی</a>
+                <a href="tools.html" style="color: var(--accent-warm, #f59e0b); text-decoration: none; font-size: 0.9rem; font-weight: bold;"><i class="fas fa-calculator"></i> ابزارها</a>
+                <span style="color: var(--text-muted); font-size: 1rem;">امیر قیصری</span>
+            </div>
         </div>
     </header>
 
@@ -511,7 +490,7 @@
         </div>
 
         <div class="hero-text-box">
-            <h2>به وب‌سایت رسمی <span class="highlight">مستر املاکی</span> خوش آمدید</h2>
+            <h1>به وب‌سایت رسمی <span class="highlight">مستر املاکی</span> خوش آمدید</h1>
             <p>آموزش تخصصی مشاورین املاک و تحلیل تخصصی بازار مسکن توسط امیر قیصری</p>
 
             <div class="social-buttons-grid">
@@ -575,20 +554,37 @@
                     </div>
                 </article>
 
+                <article class="card">
+                    <img src="qadr-osaham-thumb.jpg" alt="قدرالسهم ساختمان‌های قدیمی‌ساز" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین</h4>
+                        <p>روش‌های محاسبه قدرالسهم در قرارداد مشارکت در ساخت، عوامل موثر و نکات حقوقی مهم آن.</p>
+                        <a href="qadr-osaham.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="elnino-selab-thumb.jpg" alt="النینو و تاثیر آن بر بازار مسکن و سیلاب" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>النینو در پاییز ۱۴۰۵؛ تاثیر بر مسکن و راهکار پیشگیری از سیلاب</h4>
+                        <p>مناطق در معرض خطر سیلاب، تاثیر بر بازار مسکن و راهکارهای عملی پیشگیری از خسارت در پروژه‌های ساختمانی.</p>
+                        <a href="elnino-selab.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="card loan-card">
+                    <div class="card-body">
+                        <h3><i class="fas fa-calculator"></i> ابزارهای محاسباتی مسکن</h3>
+                        <p>محاسبه آنلاین شاخص P/R، قسط وام مسکن و قدرالسهم زمین؛ نتیجه رو فوری همین‌جا ببینید.</p>
+                        <a href="tools.html">رفتن به ابزارها</a>
+                    </div>
+                </article>
+
                 <article class="card loan-card">
                     <div class="card-body">
                         <h3>صفر تا صد وام بانک مسکن</h3>
                         <p>راهنمای کامل دریافت وام خرید مسکن، اقساط وام ۱.۲۵ میلیاردی، خرید اوراق تسه و شرایط زوجین.</p>
                         <a href="housing-loan-guide.html">مشاهده و مطالعه مقاله</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="https://img.youtube.com/vi/Q2scrR87mvs/hqdefault.jpg" alt="دوره طلایی آموزش مشاورین املاک" class="card-img">
-                    <div class="card-body">
-                        <h4>🎓 گام اول: انتخاب محیط کار، آژانس یا بنگاه؟</h4>
-                        <p>اولین قسمت از دوره طلایی آموزش مشاورین املاک — تفاوت بنگاه‌های سنتی و آژانس‌های مدرن و راهنمای انتخاب محیط کاری مناسب.</p>
-                        <a href="course-01-work-environment.html" class="btn-read-more">مشاهده دوره <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </article>
 

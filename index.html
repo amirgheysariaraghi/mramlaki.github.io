@@ -97,6 +97,23 @@
             padding: 0 1rem;
         }
 
+        .live-clock-bar {
+            background: rgba(245, 158, 11, 0.08);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+            text-align: center;
+            padding: 5px 8px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            position: sticky;
+            top: 64px;
+            z-index: 999;
+        }
+
+        .live-clock-bar i {
+            color: var(--accent-warm);
+            margin-left: 4px;
+        }
+
         .hero-image-container {
             width: 100%;
             height: 380px;
@@ -467,21 +484,31 @@
             .hero-text-box h2 { font-size: 1.5rem; }
         }
     </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"جدیدترین مقالات مستر املاکی","itemListElement":[{"@type":"ListItem","position":1,"url":"https://mramlaki.ir/eghtesaddanan-maskan-iran.html","name":"اگر ده اقتصاددان بزرگ دنیا بازار مسکن ایران را اداره می‌کردند؟"},{"@type":"ListItem","position":2,"url":"https://mramlaki.ir/ruz-tehran-maskan.html","name":"روز تهران؛ تاریخچه معاملات مسکن و مقایسه با کلان‌شهرهای جهان"},{"@type":"ListItem","position":3,"url":"https://mramlaki.ir/5-rahkar-forosh-khane.html","name":"۵ راهکار طلایی برای فروش سریع‌تر خانه در بازار امروز"},{"@type":"ListItem","position":4,"url":"https://mramlaki.ir/7000-be-10000.html","name":"۷۰۰۰ نفر شدیم؛ مسیر رسیدن به ۱۰ هزار مشترک تا فروردین ۱۴۰۶"},{"@type":"ListItem","position":5,"url":"https://mramlaki.ir/babolsar-kharid.html","name":"نکات طلایی خرید ویلا و آپارتمان در بابلسر"},{"@type":"ListItem","position":6,"url":"https://mramlaki.ir/garmabsard-ayande.html","name":"گرمابسرد کجاست و چرا آینده‌ی درخشانی در انتظارش است؟"}]}
+</script>
 </head>
 <body>
+<style id="shamsi-bar-style">
+#shamsi-bar{background:#090d16;color:#94a3b8;font-size:.82rem;text-align:center;padding:6px 1rem;border-bottom:1px solid rgba(245,158,11,.25);direction:rtl;}
+#shamsi-bar i{color:#f59e0b;margin-left:6px;}
+</style>
+<div id="shamsi-bar"><i class="far fa-calendar-alt"></i><span id="shamsi-date"></span></div>
 
     <header>
         <div class="nav-container">
             <div class="logo-title">
                 <i class="fas fa-building"></i> مستر املاکی
             </div>
-            <div style="display:flex; align-items:center; gap:16px;">
+            <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+                <a href="articles.html" style="color: var(--accent-warm, #f59e0b); text-decoration: none; font-size: 0.9rem; font-weight: bold;"><i class="fas fa-newspaper"></i> مقالات</a>
                 <a href="course.html" style="color: var(--accent-warm, #f59e0b); text-decoration: none; font-size: 0.9rem; font-weight: bold;"><i class="fas fa-graduation-cap"></i> دوره طلایی</a>
                 <a href="tools.html" style="color: var(--accent-warm, #f59e0b); text-decoration: none; font-size: 0.9rem; font-weight: bold;"><i class="fas fa-calculator"></i> ابزارها</a>
                 <span style="color: var(--text-muted); font-size: 1rem;">امیر قیصری</span>
             </div>
         </div>
     </header>
+    <div class="live-clock-bar"><i class="fas fa-clock"></i> <span id="jalali-clock">در حال بارگذاری تاریخ...</span></div>
 
     <div class="container">
 
@@ -536,84 +563,12 @@
             <h3 class="section-title"><i class="fas fa-newspaper"></i> مقالات و تحلیل‌های تخصصی</h3>
             <div class="grid">
 
-                <article class="card">
-                    <img src="cm-thumb.jpg" alt="خانه‌های سانتی‌متری" class="card-img" onerror="this.src='og-image.jpg'">
+                                <article class="card">
+                    <img src="eghtesaddanan-maskan-iran-thumb.jpg" alt="نظر اقتصاددانان بزرگ درباره بازار مسکن ایران" class="card-img" onerror="this.src='og-image.jpg'">
                     <div class="card-body">
-                        <h4>خرید و فروش خانه‌های سانتی‌متری</h4>
-                        <p>تحلیل ابهامات حقوقی، قدرالسهم پارکینگ و هزینه‌های شارژ در طرح‌های فروش خرد مسکن.</p>
-                        <a href="cm-housing.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="pr-thumb.jpg" alt="شاخص P/R" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>شاخص P/R؛ دماسنج هوشمند بازار مسکن</h4>
-                        <p>آموزش ساده محاسبه نسبت قیمت به اجاره با مثال ملک ۱ میلیاردی و تحلیل طرح مسکن استیجاری.</p>
-                        <a href="pr-ratio.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="qadr-osaham-thumb.jpg" alt="قدرالسهم ساختمان‌های قدیمی‌ساز" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>محاسبه قدرالسهم ساختمان‌های قدیمی‌ساز از زمین</h4>
-                        <p>روش‌های محاسبه قدرالسهم در قرارداد مشارکت در ساخت، عوامل موثر و نکات حقوقی مهم آن.</p>
-                        <a href="qadr-osaham.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="elnino-selab-thumb.jpg" alt="النینو و تاثیر آن بر بازار مسکن و سیلاب" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>النینو در پاییز ۱۴۰۵؛ تاثیر بر مسکن و راهکار پیشگیری از سیلاب</h4>
-                        <p>مناطق در معرض خطر سیلاب، تاثیر بر بازار مسکن و راهکارهای عملی پیشگیری از خسارت در پروژه‌های ساختمانی.</p>
-                        <a href="elnino-selab.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="bazar-maskan-tehran-1405-thumb.jpg" alt="تحلیل بازار مسکن تهران" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>بازار مسکن تهران از رکود خارج شد؟ افزایش ۳۰ درصدی معاملات مرداد</h4>
-                        <p>تحلیل کامل رفتار خریداران، پدیده تهاتر ملک با طلا و ارز، و نرخ دلاری مسکن تهران، بر اساس لایو تخصصی مستر املاکی.</p>
-                        <a href="bazar-maskan-tehran-1405.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="garmabsard-ayande-thumb.jpg" alt="آینده گرمابسرد" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>گرمابسرد کجاست و چرا آینده‌ی درخشانی در انتظارش است؟</h4>
-                        <p>تحلیل کامل بازار زمین و ویلا در گرمابسرد؛ روند صدور سند، برق کنتوری و چشم‌انداز سرمایه‌گذاری.</p>
-                        <a href="garmabsard-ayande.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="babolsar-kharid-thumb.jpg" alt="نکات خرید ویلا و آپارتمان در بابلسر" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>نکات طلایی خرید ویلا و آپارتمان در بابلسر</h4>
-                        <p>قیمت‌های روز، بهترین زمان خرید، وام مسکن، زمین شالیکاری و مقایسه مازندران و گیلان.</p>
-                        <a href="babolsar-kharid.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="7000-be-10000-thumb.jpg" alt="جشن ۷۰۰۰ مشترک کانال مستر املاکی" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>۷۰۰۰ نفر شدیم؛ مسیر رسیدن به ۱۰ هزار مشترک تا فروردین ۱۴۰۶</h4>
-                        <p>داستان رشد کانال مستر املاکی و برنامه کامل رسیدن به ۱۰ هزار مشترک.</p>
-                        <a href="7000-be-10000.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="5-rahkar-forosh-khane-thumb.jpg" alt="۵ راهکار طلایی برای فروش سریع‌تر خانه" class="card-img" onerror="this.src='og-image.jpg'">
-                    <div class="card-body">
-                        <h4>۵ راهکار طلایی برای فروش سریع‌تر خانه در بازار امروز</h4>
-                        <p>قیمت‌گذاری هوشمند، آماده‌سازی ملک، عکاسی حرفه‌ای، پاسخ‌گویی سریع و کار با مشاور حرفه‌ای.</p>
-                        <a href="5-rahkar-forosh-khane.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                        <h4>اگر ده اقتصاددان بزرگ دنیا بازار مسکن ایران را اداره می‌کردند؟</h4>
+                        <p>از کینز و هایک تا فریدمن و کروگمن؛ تحلیلی آموزشی درباره عرضه، تورم و تسهیلات مسکن.</p>
+                        <a href="eghtesaddanan-maskan-iran.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </article>
 
@@ -627,15 +582,44 @@
                 </article>
 
                 <article class="card">
-                    <img src="eghtesaddanan-maskan-iran-thumb.jpg" alt="نظر اقتصاددانان بزرگ درباره بازار مسکن ایران" class="card-img" onerror="this.src='og-image.jpg'">
+                    <img src="5-rahkar-forosh-khane-thumb.jpg" alt="۵ راهکار طلایی برای فروش سریع‌تر خانه" class="card-img" onerror="this.src='og-image.jpg'">
                     <div class="card-body">
-                        <h4>اگر ده اقتصاددان بزرگ دنیا بازار مسکن ایران را اداره می‌کردند؟</h4>
-                        <p>از کینز و هایک تا فریدمن و کروگمن؛ تحلیلی آموزشی درباره عرضه، تورم و تسهیلات مسکن.</p>
-                        <a href="eghtesaddanan-maskan-iran.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                        <h4>۵ راهکار طلایی برای فروش سریع‌تر خانه در بازار امروز</h4>
+                        <p>قیمت‌گذاری هوشمند، آماده‌سازی ملک، عکاسی حرفه‌ای، پاسخ‌گویی سریع و کار با مشاور حرفه‌ای.</p>
+                        <a href="5-rahkar-forosh-khane.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </article>
 
-                <article class="card loan-card">
+                <article class="card">
+                    <img src="7000-be-10000-thumb.jpg" alt="جشن ۷۰۰۰ مشترک کانال مستر املاکی" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>۷۰۰۰ نفر شدیم؛ مسیر رسیدن به ۱۰ هزار مشترک تا فروردین ۱۴۰۶</h4>
+                        <p>داستان رشد کانال مستر املاکی و برنامه کامل رسیدن به ۱۰ هزار مشترک.</p>
+                        <a href="7000-be-10000.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="babolsar-kharid-thumb.jpg" alt="نکات خرید ویلا و آپارتمان در بابلسر" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>نکات طلایی خرید ویلا و آپارتمان در بابلسر</h4>
+                        <p>قیمت‌های روز، بهترین زمان خرید، وام مسکن، زمین شالیکاری و مقایسه مازندران و گیلان.</p>
+                        <a href="babolsar-kharid.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="garmabsard-ayande-thumb.jpg" alt="آینده گرمابسرد" class="card-img" onerror="this.src='og-image.jpg'">
+                    <div class="card-body">
+                        <h4>گرمابسرد کجاست و چرا آینده‌ی درخشانی در انتظارش است؟</h4>
+                        <p>تحلیل کامل بازار زمین و ویلا در گرمابسرد؛ روند صدور سند، برق کنتوری و چشم‌انداز سرمایه‌گذاری.</p>
+                        <a href="garmabsard-ayande.html" class="btn-read-more">مطالعه مقاله <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+
+            <h3 style="color:#94a3b8; font-size:1rem; margin:2rem 0 1rem;">ابزارها و راهنماهای ثابت</h3>
+            <article class="card loan-card">
                     <img src="tools-thumb.jpg" alt="ابزارهای محاسباتی مسکن" class="card-img" onerror="this.src='og-image.jpg'">
                     <div class="card-body">
                         <h3><i class="fas fa-calculator"></i> ابزارهای محاسباتی مسکن</h3>
@@ -644,7 +628,7 @@
                     </div>
                 </article>
 
-                <article class="card loan-card">
+<article class="card loan-card">
                     <img src="housing-loan-guide-thumb.jpg" alt="صفر تا صد وام بانک مسکن" class="card-img" onerror="this.src='og-image.jpg'">
                     <div class="card-body">
                         <h3>صفر تا صد وام بانک مسکن</h3>
@@ -653,6 +637,19 @@
                     </div>
                 </article>
 
+            <div style="text-align:center; margin:1.8rem 0 1rem;">
+                <a href="articles.html" style="display:inline-block; background:#d97706; color:#0f172a; padding:12px 28px; border-radius:25px; text-decoration:none; font-weight:bold;">
+                    <i class="fas fa-newspaper"></i> مشاهده همه مقالات (آرشیو کامل)
+                </a>
+            </div>
+            
+
+            </div>
+
+            <div style="text-align:center; margin-top:1.8rem;">
+                <a href="articles.html" style="display:inline-flex; align-items:center; gap:8px; background: var(--accent-amber); color:#0f172a; padding:12px 28px; border-radius:25px; text-decoration:none; font-weight:bold;">
+                    <i class="fas fa-layer-group"></i> مشاهده همه مقالات
+                </a>
             </div>
         </section>
 
@@ -734,5 +731,50 @@
             .catch(err => console.log('دریافت ویدیوی یوتیوب با خطا مواجه شد، ویدیوی پیش‌فرض نمایش داده می‌شود:', err));
     </script>
 
+<script>
+(function(){
+    function div(a,b){ return Math.floor(a/b); }
+    function toJalali(gy, gm, gd){
+        var g_d_m = [0,31,59,90,120,151,181,212,243,273,304,334];
+        var jy;
+        if (gy <= 1600) { jy = 0; gy -= 621; } else { jy = 979; gy -= 1600; }
+        var gy2 = (gm > 2) ? (gy + 1) : gy;
+        var days = (365*gy) + div(gy2+3,4) - div(gy2+99,100) + div(gy2+399,400) - 80 + gd + g_d_m[gm-1];
+        jy += 33*div(days,12053);
+        days %= 12053;
+        jy += 4*div(days,1461);
+        days %= 1461;
+        if (days > 365){ jy += div(days-1,365); days = (days-1)%365; }
+        var jm, jd;
+        if (days < 186){ jm = 1 + div(days,31); jd = 1 + (days%31); }
+        else { jm = 7 + div(days-186,30); jd = 1 + ((days-186)%30); }
+        return [jy, jm, jd];
+    }
+    var monthNames = ["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"];
+    var weekDays = ["یکشنبه","دوشنبه","سه‌شنبه","چهارشنبه","پنجشنبه","جمعه","شنبه"];
+    function toFa(n){
+        var fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+        return String(n).replace(/[0-9]/g, function(d){ return fa[d]; });
+    }
+    function pad(n){ return n < 10 ? '0'+n : ''+n; }
+    function updateClock(){
+        var now = new Date();
+        var j = toJalali(now.getFullYear(), now.getMonth()+1, now.getDate());
+        var text = weekDays[now.getDay()] + "، " + toFa(j[2]) + " " + monthNames[j[1]-1] + " " + toFa(j[0]);
+        var el = document.getElementById('jalali-clock');
+        if (el) el.textContent = text;
+    }
+    updateClock();
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('shamsi-date');
+  if(!el) return;
+  try{
+    el.textContent=new Intl.DateTimeFormat('fa-IR-u-ca-persian',{weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(new Date());
+  }catch(e){ el.textContent=''; }
+})();
+</script>
 </body>
 </html>

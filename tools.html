@@ -86,6 +86,20 @@
             color: var(--accent-warm);
         }
 
+        .live-clock-bar {
+            background: rgba(245, 158, 11, 0.08);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+            text-align: center;
+            padding: 5px 8px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .live-clock-bar i {
+            color: var(--accent-warm);
+            margin-left: 4px;
+        }
+
         .page-container {
             max-width: 900px;
             margin: 2rem auto;
@@ -283,6 +297,11 @@
     </style>
 </head>
 <body>
+<style id="shamsi-bar-style">
+#shamsi-bar{background:#090d16;color:#94a3b8;font-size:.82rem;text-align:center;padding:6px 1rem;border-bottom:1px solid rgba(245,158,11,.25);direction:rtl;}
+#shamsi-bar i{color:#f59e0b;margin-left:6px;}
+</style>
+<div id="shamsi-bar"><i class="far fa-calendar-alt"></i><span id="shamsi-date"></span></div>
 
     <header>
         <div class="nav-container">
@@ -292,12 +311,11 @@
             </a>
             <nav class="nav-links">
                 <a href="index.html">صفحه اصلی</a>
-                <a href="index.html#articles">مقالات</a>
+                <a href="articles.html">مقالات</a>
                 <a href="tools.html">ابزارها</a>
             </nav>
         </div>
     </header>
-
     <main class="page-container">
 
         <header class="page-header">
@@ -506,5 +524,14 @@
         }
     </script>
 
+<script>
+(function(){
+  var el=document.getElementById('shamsi-date');
+  if(!el) return;
+  try{
+    el.textContent=new Intl.DateTimeFormat('fa-IR-u-ca-persian',{weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(new Date());
+  }catch(e){ el.textContent=''; }
+})();
+</script>
 </body>
 </html>
